@@ -1,0 +1,37 @@
+@if (events().length === 0) {
+  <p class="event-list__empty">No events found.</p>
+} @else {
+  <div class="event-list">
+    @for (event of events(); track event.id) {
+      <div class="event-card" [class.event-card--live]="event.status === 'live'">
+        <div class="event-card__header">
+          <span class="event-card__status" [attr.data-status]="event.status">
+            {{ event.status }}
+          </span>
+          <span class="event-card__sport">{{ event.sport }}</span>
+        </div>
+        <h3 class="event-card__title">{{ event.title }}</h3>
+        <div class="event-card__meta">
+          <span>{{ event.league }}</span>
+          <span>{{ event.startTime | date:'medium' }}</span>
+        </div>
+        @if (event.liveStats) {
+          <div class="event-card__stats">
+            <span class="event-card__viewers">
+              {{ event.liveStats.viewerCount | number }} viewers
+            </span>
+            <span class="event-card__peak">
+              Peak: {{ event.liveStats.peakViewerCount | number }}
+            </span>
+            <span
+              class="event-card__health"
+              [attr.data-health]="event.liveStats.streamHealth"
+            >
+              {{ event.liveStats.streamHealth }}
+            </span>
+          </div>
+        }
+      </div>
+    }
+  </div>
+}

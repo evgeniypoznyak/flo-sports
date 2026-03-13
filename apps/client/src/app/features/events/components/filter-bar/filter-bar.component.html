@@ -1,0 +1,5 @@
+<div class="filter-bar">
+  <app-toggle (toggled)="onLiveOnlyToggle($event)" />
+  <app-search-input (searchChanged)="onSearchChanged($event)" />
+  <app-sport-dropdown [options]="sports()" (sportSelected)="onSportSelected($event)" />
+</div>

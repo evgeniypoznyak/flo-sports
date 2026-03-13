@@ -1,0 +1,35 @@
+.events-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+
+  &__header {
+    margin-bottom: 24px;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+  }
+
+  &__error {
+    color: #ef4444;
+    background: #fef2f2;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-top: 16px;
+  }
+
+  &__loading {
+    text-align: center;
+    color: #6b7280;
+    padding: 48px 0;
+  }
+
+  app-filter-bar {
+    display: block;
+    margin-bottom: 24px;
+  }
+}

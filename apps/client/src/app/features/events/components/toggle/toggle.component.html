@@ -1,0 +1,14 @@
+<div
+  class="toggle"
+  role="switch"
+  tabindex="0"
+  [attr.aria-checked]="checked()"
+  [class.toggle--active]="checked()"
+  (click)="toggle()"
+  (keydown)="onKeydown($event)"
+>
+  <span class="toggle__label">Live Only</span>
+  <span class="toggle__track">
+    <span class="toggle__thumb"></span>
+  </span>
+</div>

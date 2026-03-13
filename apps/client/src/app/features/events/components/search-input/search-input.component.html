@@ -1,0 +1,20 @@
+<div class="search-input">
+  <input
+    type="text"
+    class="search-input__field"
+    placeholder="Search events..."
+    [value]="value()"
+    (input)="onInput($event)"
+    aria-label="Search events by title"
+  />
+  @if (value()) {
+    <button
+      class="search-input__clear"
+      type="button"
+      aria-label="Clear search"
+      (click)="clear()"
+    >
+      &times;
+    </button>
+  }
+</div>

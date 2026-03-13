@@ -1,0 +1,619 @@
+---
+description: Angular 19.1.4 and clean code standards for frontend applications
+globs: apps/web/**/*.ts,apps/web/**/*.tsx,apps/client/**/*.ts,apps/client/**/*.tsx,libs/shared/**/*.ts
+alwaysApply: false
+---
+
+# Angular 19.1.4 & Clean Code Standards
+
+## Priority Legend
+- 🔴 **Critical** - Must follow, no exceptions
+- 🟠 **High** - Strong recommendation, deviate only with good reason
+- 🟡 **Standard** - Expected practice
+- 🟢 **Recommended** - Best practice but flexible
+
+---
+
+## Project Setup
+
+- 🔴 **All components in Angular 19.1.4 are standalone by default** (no NgModules)
+- 🟠 **Use typed forms with FormBuilder** when creating forms
+- 🟠 **Implement signals for state management** where appropriate
+- 🟡 **Follow Angular's preferred file structure**: one component per folder with component, styles, and tests
+- 🟠 **Use OnPush change detection strategy** for all components
+
+```typescript
+// ✅ GOOD: Standalone component with OnPush strategy
+@Component({
+  selector: 'app-user-profile',
+  templateUrl: './user-profile.component.html',
+  styleUrl: './user-profile.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class UserProfileComponent {
+  // Component logic
+}
+
+// ❌ BAD: Missing OnPush strategy
+@Component({
+  selector: 'app-user-profile',
+  templateUrl: './user-profile.component.html',
+  styleUrl: './user-profile.component.scss'
+})
+export class UserProfileComponent {
+  // Component logic
+}
+```
+
+---
+
+## Component Architecture
+
+- 🟡 **Components are standalone by default** in Angular 19+ (no need for `standalone: true`)
+- 🔴 **Use `imports` array** within component decorator to import dependencies
+- 🟠 **Implement lazy loading** with `loadComponent` for route configurations
+- 🔴 **Define component inputs with `@Input()`** decorator using explicit types
+- 🔴 **Use component outputs with `@Output()`** decorator and EventEmitter
+- 🟡 **Implement signal-based state management** for component-level state
+
+```typescript
+// ✅ GOOD: Properly typed inputs and outputs
+@Component({
+  selector: 'app-data-table',
+  templateUrl: './data-table.component.html',
+  imports: [CommonModule, AgGridAngular]
+})
+export class DataTableComponent {
+  @Input() data!: UserData[];
+  @Output() rowSelected = new EventEmitter<UserData>();
+}
+
+// ❌ BAD: Untyped inputs/outputs
+@Component({
+  selector: 'app-data-table',
+  templateUrl: './data-table.component.html',
+  imports: [CommonModule, AgGridAngular]
+})
+export class DataTableComponent {
+  @Input() data: any;
+  @Output() rowSelected = new EventEmitter();
+}
+```
+
+---
+
+## AG-Grid Integration
+
+- 🔴 **Import AG-Grid components** via `import { AgGridAngular } from 'ag-grid-angular'`
+- 🔴 **Always define column definitions with proper types**
+- 🟠 **We are not using AG-Grid Enterprise features**
+- 🟡 **Implement grid customizations through component interfaces**
+- 🟡 **Define cell renderers as standalone components**
+- 🔴 **Properly type grid events with AG-Grid interfaces**
+- 🟠 **Use AG-Grid Community version features by default**
+- 🔴 **Implement proper destruction of grid instances in ngOnDestroy**
+
+---
+
+## State Management Strategy
+
+- 🟠 **Use NGXS for application-wide state management**
+- 🟠 **Use signals for component-level state management**
+- 🟡 **Follow single action file pattern for NGXS actions**
+- 🟠 **Use proper namespaces for state definitions**
+- 🟡 **Keep selectors close to state definitions**
+- 🔴 **Implement proper state interfaces**
+- 🟡 **Use `@Select()` and `@ViewSelect()` decorators** for consuming state
+- 🔴 **Dispatch actions with proper payload typing**
+- 🟠 **Implement proper error handling in state actions**
+- 🟡 **Use state models for defining state shape**
+- 🟠 **Avoid nested state modifications**
+- 🟡 **Use async pipes to subscribe to state in templates**
+
+### State Management Decision Guide
+
+| Scenario | Recommended Approach |
+|----------|---------------------|
+| Component-internal state | Signals |
+| Shared state between few components | Signal injection |
+| App-wide state | NGXS Store |
+| Complex state transitions | NGXS with side effects |
+| Form state | Angular Reactive Forms |
+
+---
+
+## TypeScript Standards
+
+- 🔴 **Use strict typing** for all variables, parameters, and return types
+- 🔴 **Avoid `any` type**, use `unknown` when type is not known
+- 🟠 **Use interface over type** for object definitions
+- 🟡 **Implement proper generics** for reusable components
+- 🟡 **Use destructuring** for cleaner code
+- 🔴 **Implement proper null checking**
+- 🟠 **Use optional chaining and nullish coalescing** where appropriate
+- 🔴 **Properly type event handlers**
+- 🟢 **Use template literal types** where beneficial
+- 🟠 **Prefer interfaces over type aliases** for public APIs
+- 🟡 **Use union types** instead of boolean parameters
+- 🟡 **Use discriminated unions** for complex conditionals
+- 🟢 **Consider readonly properties** for immutable data
+
+---
+
+## Angular Specifics
+
+- 🟠 **Use functional guards with `canActivate`** instead of class-based guards
+- 🟠 **Implement route resolvers as injectable functions** using `inject()`
+- 🔴 **Use typed HttpClient** with proper response interfaces
+- 🔴 **Implement proper error handling with HttpClient**
+- 🟠 **Use Angular signals** for component state where applicable
+- 🔴 **Implement proper unsubscribe patterns** for observables
+- 🟡 **Use template reference variables** over ViewChild when possible
+- 🟡 **Implement content projection** with ng-content when needed
+- 🟡 **Use proper attribute directives** for reusable behaviors
+
+```typescript
+// ✅ GOOD: Functional route guard
+export const authGuard = () => {
+  const router = inject(Router);
+  const authService = inject(AuthService);
+
+  return authService.isAuthenticated().pipe(
+    map(isAuthenticated => isAuthenticated || router.createUrlTree(['/login']))
+  );
+};
+
+// ❌ BAD: Class-based guard
+@Injectable({ providedIn: 'root' })
+export class AuthGuard {
+  constructor(private router: Router, private authService: AuthService) {}
+
+  canActivate(): Observable<boolean | UrlTree> {
+    return this.authService.isAuthenticated().pipe(
+      map(isAuthenticated => isAuthenticated || this.router.createUrlTree(['/login']))
+    );
+  }
+}
+```
+
+---
+
+## Testing Standards
+
+- 🔴 **Use Jest or Karma** as specified in the project setup
+- 🔴 **Implement component tests with standalone testing approach**
+- 🟠 **Mock NGXS store for component tests**
+- 🟡 **Test AG-Grid integration points**
+- 🔴 **Use proper fixture setup for components**
+- 🔴 **Mock HTTP requests with HttpTestingController**
+- 🟡 **Test store actions and state changes separately**
+- 🔴 **Implement proper async testing techniques**
+- 🟡 **Use snapshot testing sparingly** and with purpose
+- 🟡 **Implement proper DOM testing with queries**
+- 🟠 **Test behavior, not implementation**
+- 🟡 **One assertion per test** when practical
+- 🟠 **Follow FIRST principles** - Fast, Isolated, Repeatable, Self-validating, Timely
+- 🟢 **Test driven development** when appropriate
+- 🟠 **Arrange-Act-Assert** structure for tests
+- 🟡 **Test edge cases** - Ensure tests cover boundary conditions
+
+---
+
+## Performance Considerations
+
+- 🔴 **Use OnPush change detection** for all components
+- 🟠 **Implement trackBy functions** for ngFor loops
+- 🟡 **Use virtual scrolling** for large lists
+- 🟡 **Implement proper memoization techniques**
+- 🟠 **Avoid template expressions with heavy calculations**
+- 🟡 **Use pure pipes** for transformations
+- 🟡 **Implement proper AG-Grid virtualization settings**
+- 🟠 **Optimize change detection by minimizing bindings**
+- 🟡 **Use defer blocks** for non-critical content
+- 🟠 **Lazy load modules and components** when appropriate
+- 🟢 **Use runtime performance profiling** for complex components
+
+---
+
+## Styling Guidelines with Tailwind CSS
+
+- 🔴 **Use Tailwind utility classes directly in templates** instead of component-scoped styles
+- 🟡 **Implement component-specific styling with Tailwind's @apply directive** in rare cases where needed
+- 🟠 **Follow utility-first approach** by composing styles with Tailwind classes
+- 🟡 **Use Tailwind's responsive prefixes** (sm:, md:, lg:, xl:) for responsive designs
+- 🟡 **Leverage Tailwind's theme customization** in tailwind.config.js instead of CSS variables
+- 🟡 **Group related utility classes** for better readability (layout, spacing, typography, etc.)
+- 🟡 **Extract common patterns to Tailwind components** using @apply in a dedicated styles file when repeated across components
+- 🟠 **Minimize usage of !important** by using Tailwind's built-in methods for handling specificity
+- 🟡 **Use Tailwind's dark mode utilities** for implementing dark mode support
+- 🟢 **Leverage Tailwind plugins** for specialized UI patterns that are used frequently
+
+---
+
+## Error Handling
+
+- 🔴 **Implement proper global error handling**
+- 🔴 **Use typed error responses from HTTP requests**
+- 🔴 **Handle errors in NGXS state actions**
+- 🟠 **Provide user-friendly error messages**
+- 🟡 **Implement proper logging mechanisms**
+- 🟡 **Use error boundaries where applicable**
+- 🟠 **Gracefully degrade UI when errors occur**
+- 🟡 **Create custom error classes** for domain-specific errors
+- 🟠 **Centralize error handling** in dedicated services
+- 🟡 **Use Result objects or Either types** for expected failures
+
+---
+
+## API Calls
+
+- 🔴 **Import APIs from shared libraries** (`libs/shared`) only, not directly from backend code
+- 🔴 **Type all HTTP request and response payloads** using interfaces from shared libs
+- 🟠 **Implement retry logic** for transient failures
+- 🟠 **Centralize API client creation** in services
+- 🟡 **Use interceptors** for common request/response handling
+- 🟠 **Implement proper authentication token management**
+- 🟡 **Use cancel tokens** for cancellable requests
+- 🟡 **Handle environment-specific API URLs** via environment files
+
+---
+
+## Accessibility Standards
+
+- 🔴 **Follow WCAG 2.1 AA standards** at minimum
+- 🔴 **Ensure proper keyboard navigation** for all interactive elements
+- 🔴 **Implement proper ARIA attributes** for custom components
+- 🟠 **Maintain proper focus management** during dynamic content changes
+- 🟠 **Ensure sufficient color contrast** (4.5:1 for normal text)
+- 🟡 **Use semantic HTML elements** whenever possible
+- 🟡 **Test with screen readers** during development
+- 🟡 **Implement skip navigation links** for keyboard users
+- 🟠 **Ensure form inputs have associated labels**
+- 🟡 **Provide text alternatives** for non-text content
+
+---
+
+## Internationalization (i18n)
+
+- 🟠 **Use Angular's i18n system** for text externalization
+- 🟠 **Avoid hardcoded text** in components and templates
+- 🟡 **Organize translations by feature** rather than flat files
+- 🟡 **Use ICU syntax** for pluralization and selection
+- 🟡 **Implement runtime locale switching** if required
+- 🟠 **Use proper date, number, and currency formatting**
+- 🟡 **Consider text expansion** in UI design (some languages require more space)
+- 🟢 **Document string context** for translators
+
+---
+
+## Security Best Practices
+
+- 🔴 **Sanitize all user inputs** to prevent XSS attacks
+- 🔴 **Use Angular's built-in XSS protection**
+- 🔴 **Implement proper CSRF protection**
+- 🟠 **Avoid storing sensitive data in localStorage**
+- 🟠 **Use HttpOnly cookies** for authentication tokens when possible
+- 🟡 **Implement Content Security Policy**
+- 🟡 **Use proper CORS configuration**
+- 🟠 **Validate all inputs** on both client and server
+- 🟡 **Implement rate limiting** for sensitive operations
+- 🟠 **Follow least privilege principle** for API calls
+
+---
+
+## Documentation Standards
+
+- 🟠 **Use JSDoc/TSDoc comments** for public APIs and services
+- 🟡 **Document component inputs and outputs**
+- 🟡 **Create README files** for major features and modules
+- 🟡 **Document state management patterns**
+- 🟡 **Use TypeScript interfaces as documentation**
+- 🟢 **Maintain architecture decision records** (ADRs) for significant choices
+- 🟢 **Generate API documentation** automatically
+- 🟡 **Create usage examples** for reusable components
+
+---
+
+## Clean Code Principles
+
+- 🔴 **Avoid nested if statements** - Use guard clauses and early returns instead
+- 🔴 **Limit parameters** - Functions should have 2 or fewer parameters; use object parameters for more
+- 🔴 **Keep functions small** - Functions should be under 50 lines of code
+- 🔴 **Single responsibility** - Each function should do only one thing and do it well
+- 🔴 **Avoid cascading conditionals** - Replace if/else if/else if/else chains with switch statements or separate conditionals
+- 🟠 **Use early return pattern** - Return early to reduce nesting and improve readability
+- 🔴 **Use meaningful names** - Descriptive variable and function names that reveal intent
+- 🔴 **Use verb-based function names** - Functions should be named with verbs that describe what they do
+- 🟠 **Extract complex logic** - Refactor complex logic into smaller, well-named functions
+- 🟡 **Maximum line length** - Keep lines under 80-100 characters
+- 🟡 **Group related functionality** - Related code should be kept together
+- 🟠 **Minimize comments** - Write self-documenting code; comments should explain "why" not "what"
+- 🟡 **Consistent formatting** - Use consistent indentation, spacing, and brace style
+- 🟠 **DRY (Don't Repeat Yourself)** - Eliminate duplicated code and logic
+- 🟡 **YAGNI (You Aren't Gonna Need It)** - Don't add functionality until it's necessary
+- 🟡 **KISS (Keep It Simple, Stupid)** - Keep code as simple as possible
+- 🟠 **Fail fast** - Detect and report errors as soon as possible
+- 🟠 **Prefer immutability** - Use const by default and avoid mutating state
+- 🟡 **Law of Demeter** - Objects should only talk to their immediate neighbors
+- 🟡 **Pure functions** - Functions should avoid side effects when possible
+- 🟡 **Encapsulate conditionals** - Extract complex conditionals into well-named functions
+- 🟡 **Replace primitives with types** - Use interfaces for domain concepts instead of primitives
+- 🟡 **Tell, don't ask** - Tell objects what to do rather than asking for their state
+
+```typescript
+// ✅ GOOD: Early return pattern
+function processUser(user: User | null): string {
+  if (!user) return 'No user found';
+  if (!user.isActive) return 'User is inactive';
+
+  return `Welcome ${user.name}!`;
+}
+
+// ❌ BAD: Nested conditionals
+function processUser(user: User | null): string {
+  if (user) {
+    if (user.isActive) {
+      return `Welcome ${user.name}!`;
+    } else {
+      return 'User is inactive';
+    }
+  } else {
+    return 'No user found';
+  }
+}
+```
+
+---
+
+## Build and Deployment
+
+- 🔴 **Use Angular CLI for builds** with proper configuration
+- 🟠 **Enable production optimizations** for production builds
+- 🟠 **Configure proper environment files** for different deployment targets
+- 🟡 **Implement build-time error checking**
+- 🟡 **Set up CI/CD pipelines** for automated builds and deployments
+- 🟡 **Version static assets** for cache busting
+- 🟡 **Implement lazy loading** of non-critical modules
+- 🟢 **Configure source maps** appropriately for each environment
+- 🟡 **Optimize bundle sizes** with code splitting
+- 🟢 **Implement deploy previews** for pull requests
+
+---
+
+## Code Quality Metrics
+
+- 🟠 **Cyclomatic complexity** - Keep function complexity low (<10)
+- 🟡 **Maintainability index** - Track code maintainability
+- 🟡 **Cognitive complexity** - Minimize mental effort needed to understand code
+- 🟡 **Code coverage** - Aim for high test coverage (>80%)
+- 🟢 **Dependency metrics** - Track inbound and outbound dependencies
+- 🟢 **Use automated code quality tools** like SonarQube, ESLint
+
+---
+
+## Domain-Driven Design File Structure
+
+- 🟠 **Organize code by domain boundaries** rather than technical types
+- 🟠 **Implement bounded contexts** with clear boundaries
+- 🟠 **Use layered architecture** within each domain:
+
+```
+apps/web/ or apps/client/
+├── src/
+│   ├── app/
+│   │   ├── core/
+│   │   │   ├── auth/
+│   │   │   ├── error-handling/
+│   │   │   ├── http/
+│   │   │   └── ...
+│   │   │
+│   │   ├── shared/
+│   │   │   ├── components/
+│   │   │   ├── directives/
+│   │   │   ├── pipes/
+│   │   │   └── ...
+│   │   │
+│   │   ├── features/
+│   │   │   ├── users/
+│   │   │   │   ├── domain/
+│   │   │   │   ├── application/
+│   │   │   │   ├── infrastructure/
+│   │   │   │   ├── presentation/
+│   │   │   │   └── state/
+│   │   │   └── ...
+│   │   │
+│   │   └── shell/
+│   │       ├── layout/
+│   │       └── ...
+│   │
+│   ├── assets/
+│   ├── environments/
+│   └── ...
+```
+
+- 🟠 **Represent domain concepts** as entities, aggregates, and value objects
+- 🟡 **Use repositories** to abstract data access
+- 🟡 **Implement domain services** for operations that don't belong to entities
+- 🟡 **Use application services** to coordinate use cases
+- 🟢 **Consider implementing CQRS pattern** for complex domains
+- 🟢 **Use domain events** for cross-boundary communication
+
+---
+
+## JavaScript/TypeScript Best Practices
+
+- 🟡 **Use destructuring** for object and array access
+- 🟡 **Prefer array methods** (`map`, `filter`, `reduce`) over loops
+- 🟠 **Use optional chaining** (`?.`) and nullish coalescing (`??`)
+- 🟡 **Apply functional programming principles** where appropriate
+- 🟡 **Use template literals** for string interpolation
+- 🟠 **Prefer async/await** over raw promises
+- 🟠 **Use ESLint and Prettier** for consistent code style
+
+---
+
+## Versioning Strategy
+
+- 🟠 **Follow Semantic Versioning** for component libraries
+- 🟡 **Maintain change logs** for significant changes
+- 🟡 **Plan for Angular version upgrades**
+- 🟡 **Document breaking changes** clearly
+- 🟢 **Create migration guides** for major changes
+- 🟢 **Use feature flags** for gradual rollouts
+
+---
+
+## Test-Driven Development (TDD)
+
+- 🔴 **Write tests FIRST, before implementation code** - Follow the red-green-refactor cycle strictly
+- 🔴 **All new features must have test coverage** - No code ships without tests
+- 🟠 **Aim for high test coverage** - Target >80% code coverage for critical paths
+- 🟠 **Keep tests focused and isolated** - Each test should verify one behavior
+- 🟡 **Use descriptive test names** that clearly state what is being tested and the expected outcome
+- 🟠 **Follow Arrange-Act-Assert (AAA) pattern** for all test cases
+
+```typescript
+// ✅ GOOD: TDD approach - write test first
+describe('UserService.getUserById', () => {
+  // ARRANGE
+  it('should return a user when provided a valid ID', () => {
+    const userService = new UserService(httpClientMock);
+    const mockUser: User = { id: 1, name: 'John Doe' };
+    httpClientMock.get.mockReturnValue(of(mockUser));
+
+    // ACT
+    const result = userService.getUserById(1);
+
+    // ASSERT
+    expect(result).toEqual(mockUser);
+  });
+
+  it('should throw an error when user is not found', () => {
+    const userService = new UserService(httpClientMock);
+    httpClientMock.get.mockReturnValue(throwError(() => new Error('404')));
+
+    expect(() => userService.getUserById(999)).toThrow();
+  });
+});
+
+// ❌ BAD: Writing code first without tests
+export class UserService {
+  constructor(private http: HttpClient) {}
+
+  getUserById(id: number): Observable<User> {
+    return this.http.get<User>(`/api/users/${id}`);
+  }
+}
+```
+
+### TDD Workflow
+
+1. **Red Phase**: Write a failing test that describes the desired behavior
+2. **Green Phase**: Write minimal code to make the test pass
+3. **Refactor Phase**: Improve code quality while keeping tests passing
+4. **Repeat**: For each new requirement or edge case
+
+### Test Categories
+
+- 🔴 **Unit Tests**: Test individual functions/methods in isolation
+- 🟠 **Integration Tests**: Test interactions between components/services
+- 🟡 **Component Tests**: Test Angular component rendering and behavior
+- 🟡 **E2E Tests**: Test complete user workflows (use sparingly for critical paths)
+
+### Mocking & Fixtures
+
+- 🟠 **Mock external dependencies** - Services, HTTP calls, observables
+- 🟡 **Create reusable test fixtures** for common test scenarios
+- 🟡 **Use factory functions** to generate test data consistently
+- 🟠 **Avoid mocking the code you're testing** - Only mock external dependencies
+
+```typescript
+// ✅ GOOD: Using test factory
+function createMockUser(overrides?: Partial<User>): User {
+  return {
+    id: 1,
+    name: 'Test User',
+    email: 'test@example.com',
+    isActive: true,
+    ...overrides
+  };
+}
+
+it('should deactivate an active user', () => {
+  const activeUser = createMockUser({ isActive: true });
+  const result = userService.deactivateUser(activeUser);
+  expect(result.isActive).toBe(false);
+});
+```
+
+### Component Testing
+
+- 🔴 **Always test component inputs and outputs** with proper typing
+- 🟠 **Test user interactions** (clicks, form inputs, etc.)
+- 🟡 **Verify change detection** when using OnPush strategy
+- 🔴 **Test error states** and edge cases
+- 🟡 **Mock services** that the component depends on
+
+```typescript
+// ✅ GOOD: Component test with proper setup
+describe('UserProfileComponent', () => {
+  let component: UserProfileComponent;
+  let fixture: ComponentFixture<UserProfileComponent>;
+  let userServiceMock: Partial<UserService>;
+
+  beforeEach(async () => {
+    userServiceMock = {
+      getUserById: jasmine.createSpy().and.returnValue(of(createMockUser()))
+    };
+
+    await TestBed.configureTestingModule({
+      imports: [UserProfileComponent],
+      providers: [{ provide: UserService, useValue: userServiceMock }]
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(UserProfileComponent);
+    component = fixture.componentInstance;
+    component.userId = 1;
+    fixture.detectChanges();
+  });
+
+  it('should display user name when user loads', () => {
+    const nameElement = fixture.debugElement.query(By.css('h1'));
+    expect(nameElement.nativeElement.textContent).toContain('Test User');
+  });
+
+  it('should emit userDeleted when delete button is clicked', () => {
+    spyOn(component.userDeleted, 'emit');
+    const deleteButton = fixture.debugElement.query(By.css('button.delete'));
+    deleteButton.nativeElement.click();
+    expect(component.userDeleted.emit).toHaveBeenCalled();
+  });
+});
+```
+
+### State Management Testing (NGXS)
+
+- 🟠 **Test state selectors** to verify state shape
+- 🟠 **Test actions** dispatching and resulting state changes
+- 🟡 **Test side effects** (API calls, services) independently
+- 🟡 **Mock HTTP calls** when testing state actions
+
+---
+
+## ESLint Integration
+
+These rules should be enforced with the following ESLint configurations:
+
+- `@angular-eslint/recommended`
+- `@typescript-eslint/recommended`
+- Custom rules for project-specific standards
+
+Critical rules to enable:
+- `no-nested-ternary`
+- `max-depth` (set to 2)
+- `max-lines-per-function` (set to 50)
+- `max-params` (set to 2)
+- `complexity` (set to 10)
+- `@typescript-eslint/explicit-function-return-type`
+- `@typescript-eslint/no-explicit-any`
+- `@angular-eslint/use-on-push-change-detection`

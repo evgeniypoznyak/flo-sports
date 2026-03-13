@@ -1,0 +1,51 @@
+<div class="dropdown" tabindex="-1" (keydown)="onKeydown($event)">
+  <button
+    class="dropdown__trigger"
+    type="button"
+    role="combobox"
+    [attr.aria-expanded]="isOpen()"
+    aria-haspopup="listbox"
+    aria-controls="sport-listbox"
+    (click)="toggleDropdown()"
+  >
+    <span class="dropdown__selected">{{ selectedLabel() }}</span>
+    <span class="dropdown__arrow" [class.dropdown__arrow--open]="isOpen()">&#9662;</span>
+  </button>
+
+  @if (isOpen()) {
+    <div class="dropdown__panel" role="listbox" id="sport-listbox">
+      <input
+        class="dropdown__search"
+        type="text"
+        placeholder="Search sports..."
+        [value]="searchTerm()"
+        (input)="onSearchInput($event)"
+        aria-label="Filter sports"
+      />
+      <ul class="dropdown__options">
+        <li
+          class="dropdown__option dropdown__option--clear"
+          role="option"
+          tabindex="0"
+          [attr.aria-selected]="selectedLabel() === 'All Sports'"
+          (click)="clearSelection()"
+          (keydown.enter)="clearSelection()"
+        >
+          All Sports
+        </li>
+        @for (option of filteredOptions(); track option) {
+          <li
+            class="dropdown__option"
+            role="option"
+            tabindex="0"
+            [attr.aria-selected]="selectedLabel() === option"
+            (click)="selectOption(option)"
+            (keydown.enter)="selectOption(option)"
+          >
+            {{ option }}
+          </li>
+        }
+      </ul>
+    </div>
+  }
+</div>

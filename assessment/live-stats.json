@@ -1,0 +1,3271 @@
+[
+  {
+    "eventId": "evt-0003",
+    "viewerCount": 4171,
+    "peakViewerCount": 4955,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:47.146Z"
+  },
+  {
+    "eventId": "evt-0008",
+    "viewerCount": 29661,
+    "peakViewerCount": 44636,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.879Z"
+  },
+  {
+    "eventId": "evt-0021",
+    "viewerCount": 11894,
+    "peakViewerCount": 12114,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:40.145Z"
+  },
+  {
+    "eventId": "evt-0022",
+    "viewerCount": 25798,
+    "peakViewerCount": 33138,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:49.800Z"
+  },
+  {
+    "eventId": "evt-0023",
+    "viewerCount": 36095,
+    "peakViewerCount": 49601,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:43.583Z"
+  },
+  {
+    "eventId": "evt-0048",
+    "viewerCount": 2727,
+    "peakViewerCount": 14054,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.851Z"
+  },
+  {
+    "eventId": "evt-0049",
+    "viewerCount": 10334,
+    "peakViewerCount": 13753,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:57.361Z"
+  },
+  {
+    "eventId": "evt-0064",
+    "viewerCount": 3525,
+    "peakViewerCount": 9096,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.953Z"
+  },
+  {
+    "eventId": "evt-0070",
+    "viewerCount": 4624,
+    "peakViewerCount": 8350,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:30.100Z"
+  },
+  {
+    "eventId": "evt-0071",
+    "viewerCount": 5228,
+    "peakViewerCount": 19682,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:39.906Z"
+  },
+  {
+    "eventId": "evt-0108",
+    "viewerCount": 26273,
+    "peakViewerCount": 33291,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.357Z"
+  },
+  {
+    "eventId": "evt-0122",
+    "viewerCount": 38876,
+    "peakViewerCount": 50309,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:46.717Z"
+  },
+  {
+    "eventId": "evt-0132",
+    "viewerCount": 38116,
+    "peakViewerCount": 51888,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:42.005Z"
+  },
+  {
+    "eventId": "evt-0157",
+    "viewerCount": 216,
+    "peakViewerCount": 11200,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.424Z"
+  },
+  {
+    "eventId": "evt-0158",
+    "viewerCount": 42359,
+    "peakViewerCount": 53340,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.553Z"
+  },
+  {
+    "eventId": "evt-0170",
+    "viewerCount": 42696,
+    "peakViewerCount": 57486,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:43.075Z"
+  },
+  {
+    "eventId": "evt-0175",
+    "viewerCount": 37404,
+    "peakViewerCount": 38109,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:51.542Z"
+  },
+  {
+    "eventId": "evt-0180",
+    "viewerCount": 42046,
+    "peakViewerCount": 45455,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:46.988Z"
+  },
+  {
+    "eventId": "evt-0188",
+    "viewerCount": 16524,
+    "peakViewerCount": 30042,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.540Z"
+  },
+  {
+    "eventId": "evt-0209",
+    "viewerCount": 24620,
+    "peakViewerCount": 26644,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:30.208Z"
+  },
+  {
+    "eventId": "evt-0230",
+    "viewerCount": 28733,
+    "peakViewerCount": 40657,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:46.700Z"
+  },
+  {
+    "eventId": "evt-0239",
+    "viewerCount": 23747,
+    "peakViewerCount": 34257,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:33.924Z"
+  },
+  {
+    "eventId": "evt-0265",
+    "viewerCount": 15140,
+    "peakViewerCount": 22124,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:39.477Z"
+  },
+  {
+    "eventId": "evt-0275",
+    "viewerCount": 21182,
+    "peakViewerCount": 23361,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:33.510Z"
+  },
+  {
+    "eventId": "evt-0283",
+    "viewerCount": 392,
+    "peakViewerCount": 13581,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:32.395Z"
+  },
+  {
+    "eventId": "evt-0300",
+    "viewerCount": 7922,
+    "peakViewerCount": 13313,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:53.259Z"
+  },
+  {
+    "eventId": "evt-0314",
+    "viewerCount": 3324,
+    "peakViewerCount": 15575,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.736Z"
+  },
+  {
+    "eventId": "evt-0321",
+    "viewerCount": 3235,
+    "peakViewerCount": 5138,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:32.503Z"
+  },
+  {
+    "eventId": "evt-0347",
+    "viewerCount": 36472,
+    "peakViewerCount": 38657,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:31.246Z"
+  },
+  {
+    "eventId": "evt-0377",
+    "viewerCount": 33544,
+    "peakViewerCount": 47659,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.249Z"
+  },
+  {
+    "eventId": "evt-0390",
+    "viewerCount": 39307,
+    "peakViewerCount": 44792,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:33.931Z"
+  },
+  {
+    "eventId": "evt-0410",
+    "viewerCount": 40460,
+    "peakViewerCount": 44931,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:36.545Z"
+  },
+  {
+    "eventId": "evt-0419",
+    "viewerCount": 29949,
+    "peakViewerCount": 39693,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:53.832Z"
+  },
+  {
+    "eventId": "evt-0423",
+    "viewerCount": 35036,
+    "peakViewerCount": 39812,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:49.426Z"
+  },
+  {
+    "eventId": "evt-0427",
+    "viewerCount": 14791,
+    "peakViewerCount": 22826,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:53.604Z"
+  },
+  {
+    "eventId": "evt-0451",
+    "viewerCount": 20342,
+    "peakViewerCount": 21901,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:40.227Z"
+  },
+  {
+    "eventId": "evt-0455",
+    "viewerCount": 27812,
+    "peakViewerCount": 35152,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.991Z"
+  },
+  {
+    "eventId": "evt-0459",
+    "viewerCount": 816,
+    "peakViewerCount": 6935,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:31.936Z"
+  },
+  {
+    "eventId": "evt-0462",
+    "viewerCount": 44687,
+    "peakViewerCount": 48559,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:49.446Z"
+  },
+  {
+    "eventId": "evt-0466",
+    "viewerCount": 26824,
+    "peakViewerCount": 31671,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:52.647Z"
+  },
+  {
+    "eventId": "evt-0495",
+    "viewerCount": 44822,
+    "peakViewerCount": 56395,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:56.392Z"
+  },
+  {
+    "eventId": "evt-0503",
+    "viewerCount": 43559,
+    "peakViewerCount": 47153,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.239Z"
+  },
+  {
+    "eventId": "evt-0522",
+    "viewerCount": 41243,
+    "peakViewerCount": 41290,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:50.450Z"
+  },
+  {
+    "eventId": "evt-0524",
+    "viewerCount": 38643,
+    "peakViewerCount": 40198,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:46.157Z"
+  },
+  {
+    "eventId": "evt-0527",
+    "viewerCount": 15924,
+    "peakViewerCount": 16184,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:46.671Z"
+  },
+  {
+    "eventId": "evt-0530",
+    "viewerCount": 45104,
+    "peakViewerCount": 45608,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:55.783Z"
+  },
+  {
+    "eventId": "evt-0533",
+    "viewerCount": 2047,
+    "peakViewerCount": 12040,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:31.929Z"
+  },
+  {
+    "eventId": "evt-0543",
+    "viewerCount": 40759,
+    "peakViewerCount": 53978,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.333Z"
+  },
+  {
+    "eventId": "evt-0545",
+    "viewerCount": 31286,
+    "peakViewerCount": 42897,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:43.702Z"
+  },
+  {
+    "eventId": "evt-0554",
+    "viewerCount": 5360,
+    "peakViewerCount": 11854,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:30.613Z"
+  },
+  {
+    "eventId": "evt-0559",
+    "viewerCount": 5483,
+    "peakViewerCount": 12031,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:41.506Z"
+  },
+  {
+    "eventId": "evt-0560",
+    "viewerCount": 44072,
+    "peakViewerCount": 57872,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:49.266Z"
+  },
+  {
+    "eventId": "evt-0584",
+    "viewerCount": 21510,
+    "peakViewerCount": 23653,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.213Z"
+  },
+  {
+    "eventId": "evt-0594",
+    "viewerCount": 19205,
+    "peakViewerCount": 25297,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:55.754Z"
+  },
+  {
+    "eventId": "evt-0618",
+    "viewerCount": 13244,
+    "peakViewerCount": 27148,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:47.260Z"
+  },
+  {
+    "eventId": "evt-0625",
+    "viewerCount": 14517,
+    "peakViewerCount": 26094,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:31.789Z"
+  },
+  {
+    "eventId": "evt-0650",
+    "viewerCount": 29923,
+    "peakViewerCount": 42288,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:34.647Z"
+  },
+  {
+    "eventId": "evt-0657",
+    "viewerCount": 14778,
+    "peakViewerCount": 22856,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.984Z"
+  },
+  {
+    "eventId": "evt-0669",
+    "viewerCount": 5905,
+    "peakViewerCount": 7911,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:36.033Z"
+  },
+  {
+    "eventId": "evt-0687",
+    "viewerCount": 39957,
+    "peakViewerCount": 45656,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:33.700Z"
+  },
+  {
+    "eventId": "evt-0700",
+    "viewerCount": 8126,
+    "peakViewerCount": 12869,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:29.629Z"
+  },
+  {
+    "eventId": "evt-0719",
+    "viewerCount": 20725,
+    "peakViewerCount": 34640,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.694Z"
+  },
+  {
+    "eventId": "evt-0723",
+    "viewerCount": 3176,
+    "peakViewerCount": 12760,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:53.551Z"
+  },
+  {
+    "eventId": "evt-0788",
+    "viewerCount": 28402,
+    "peakViewerCount": 42534,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:30.937Z"
+  },
+  {
+    "eventId": "evt-0816",
+    "viewerCount": 35977,
+    "peakViewerCount": 44382,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:46.028Z"
+  },
+  {
+    "eventId": "evt-0825",
+    "viewerCount": 22105,
+    "peakViewerCount": 35477,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:35.552Z"
+  },
+  {
+    "eventId": "evt-0830",
+    "viewerCount": 40963,
+    "peakViewerCount": 50160,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:42.175Z"
+  },
+  {
+    "eventId": "evt-0836",
+    "viewerCount": 14515,
+    "peakViewerCount": 19294,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:39.097Z"
+  },
+  {
+    "eventId": "evt-0843",
+    "viewerCount": 30856,
+    "peakViewerCount": 32076,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:41.464Z"
+  },
+  {
+    "eventId": "evt-0845",
+    "viewerCount": 18707,
+    "peakViewerCount": 33635,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:47.452Z"
+  },
+  {
+    "eventId": "evt-0855",
+    "viewerCount": 31184,
+    "peakViewerCount": 45304,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:55.191Z"
+  },
+  {
+    "eventId": "evt-0863",
+    "viewerCount": 9310,
+    "peakViewerCount": 20054,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:48.190Z"
+  },
+  {
+    "eventId": "evt-0894",
+    "viewerCount": 31784,
+    "peakViewerCount": 46361,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:33.314Z"
+  },
+  {
+    "eventId": "evt-0899",
+    "viewerCount": 614,
+    "peakViewerCount": 3612,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:36.287Z"
+  },
+  {
+    "eventId": "evt-0903",
+    "viewerCount": 21401,
+    "peakViewerCount": 35003,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.625Z"
+  },
+  {
+    "eventId": "evt-0932",
+    "viewerCount": 42600,
+    "peakViewerCount": 54562,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.684Z"
+  },
+  {
+    "eventId": "evt-0947",
+    "viewerCount": 25174,
+    "peakViewerCount": 36791,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:46.526Z"
+  },
+  {
+    "eventId": "evt-0954",
+    "viewerCount": 30241,
+    "peakViewerCount": 35185,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:35.270Z"
+  },
+  {
+    "eventId": "evt-0964",
+    "viewerCount": 43156,
+    "peakViewerCount": 55431,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.294Z"
+  },
+  {
+    "eventId": "evt-0966",
+    "viewerCount": 19753,
+    "peakViewerCount": 22642,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.977Z"
+  },
+  {
+    "eventId": "evt-1000",
+    "viewerCount": 17207,
+    "peakViewerCount": 20612,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:34.370Z"
+  },
+  {
+    "eventId": "evt-1011",
+    "viewerCount": 6197,
+    "peakViewerCount": 6576,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:53.000Z"
+  },
+  {
+    "eventId": "evt-1024",
+    "viewerCount": 32391,
+    "peakViewerCount": 41765,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:31.828Z"
+  },
+  {
+    "eventId": "evt-1033",
+    "viewerCount": 20947,
+    "peakViewerCount": 32797,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:57.227Z"
+  },
+  {
+    "eventId": "evt-1041",
+    "viewerCount": 34694,
+    "peakViewerCount": 35976,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.502Z"
+  },
+  {
+    "eventId": "evt-1066",
+    "viewerCount": 12969,
+    "peakViewerCount": 19167,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:46.839Z"
+  },
+  {
+    "eventId": "evt-1072",
+    "viewerCount": 42057,
+    "peakViewerCount": 48587,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:34.012Z"
+  },
+  {
+    "eventId": "evt-1095",
+    "viewerCount": 44858,
+    "peakViewerCount": 57083,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:43.863Z"
+  },
+  {
+    "eventId": "evt-1119",
+    "viewerCount": 29812,
+    "peakViewerCount": 35491,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:46.440Z"
+  },
+  {
+    "eventId": "evt-1126",
+    "viewerCount": 17684,
+    "peakViewerCount": 29396,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:55.704Z"
+  },
+  {
+    "eventId": "evt-1128",
+    "viewerCount": 1065,
+    "peakViewerCount": 14240,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:50.279Z"
+  },
+  {
+    "eventId": "evt-1137",
+    "viewerCount": 43191,
+    "peakViewerCount": 57695,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:48.785Z"
+  },
+  {
+    "eventId": "evt-1142",
+    "viewerCount": 12693,
+    "peakViewerCount": 26603,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:28.701Z"
+  },
+  {
+    "eventId": "evt-1165",
+    "viewerCount": 28662,
+    "peakViewerCount": 40744,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.198Z"
+  },
+  {
+    "eventId": "evt-1200",
+    "viewerCount": 37783,
+    "peakViewerCount": 46104,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:36.395Z"
+  },
+  {
+    "eventId": "evt-1212",
+    "viewerCount": 20413,
+    "peakViewerCount": 35032,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:36.744Z"
+  },
+  {
+    "eventId": "evt-1230",
+    "viewerCount": 31961,
+    "peakViewerCount": 36274,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:37.604Z"
+  },
+  {
+    "eventId": "evt-1242",
+    "viewerCount": 34247,
+    "peakViewerCount": 37381,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:37.553Z"
+  },
+  {
+    "eventId": "evt-1244",
+    "viewerCount": 37005,
+    "peakViewerCount": 47627,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.772Z"
+  },
+  {
+    "eventId": "evt-1285",
+    "viewerCount": 7740,
+    "peakViewerCount": 20572,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:46.638Z"
+  },
+  {
+    "eventId": "evt-1289",
+    "viewerCount": 22661,
+    "peakViewerCount": 22763,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:44.610Z"
+  },
+  {
+    "eventId": "evt-1297",
+    "viewerCount": 22602,
+    "peakViewerCount": 34693,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:31.797Z"
+  },
+  {
+    "eventId": "evt-1322",
+    "viewerCount": 27219,
+    "peakViewerCount": 41069,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:57.235Z"
+  },
+  {
+    "eventId": "evt-1338",
+    "viewerCount": 39944,
+    "peakViewerCount": 41296,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:46.207Z"
+  },
+  {
+    "eventId": "evt-1360",
+    "viewerCount": 23496,
+    "peakViewerCount": 25010,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:55.817Z"
+  },
+  {
+    "eventId": "evt-1381",
+    "viewerCount": 9385,
+    "peakViewerCount": 17876,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.878Z"
+  },
+  {
+    "eventId": "evt-1416",
+    "viewerCount": 12348,
+    "peakViewerCount": 13596,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:41.044Z"
+  },
+  {
+    "eventId": "evt-1424",
+    "viewerCount": 24679,
+    "peakViewerCount": 29898,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:42.473Z"
+  },
+  {
+    "eventId": "evt-1444",
+    "viewerCount": 11914,
+    "peakViewerCount": 16066,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:43.088Z"
+  },
+  {
+    "eventId": "evt-1461",
+    "viewerCount": 21661,
+    "peakViewerCount": 24085,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:33.935Z"
+  },
+  {
+    "eventId": "evt-1466",
+    "viewerCount": 27517,
+    "peakViewerCount": 34301,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.716Z"
+  },
+  {
+    "eventId": "evt-1482",
+    "viewerCount": 14772,
+    "peakViewerCount": 24800,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:40.414Z"
+  },
+  {
+    "eventId": "evt-1486",
+    "viewerCount": 35012,
+    "peakViewerCount": 39057,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:43.270Z"
+  },
+  {
+    "eventId": "evt-1497",
+    "viewerCount": 35496,
+    "peakViewerCount": 46279,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:50.480Z"
+  },
+  {
+    "eventId": "evt-1503",
+    "viewerCount": 31735,
+    "peakViewerCount": 46587,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:38.252Z"
+  },
+  {
+    "eventId": "evt-1506",
+    "viewerCount": 27964,
+    "peakViewerCount": 37658,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:36.145Z"
+  },
+  {
+    "eventId": "evt-1515",
+    "viewerCount": 21621,
+    "peakViewerCount": 31246,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:30.950Z"
+  },
+  {
+    "eventId": "evt-1516",
+    "viewerCount": 25935,
+    "peakViewerCount": 40135,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:41.893Z"
+  },
+  {
+    "eventId": "evt-1525",
+    "viewerCount": 14726,
+    "peakViewerCount": 23940,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:40.107Z"
+  },
+  {
+    "eventId": "evt-1541",
+    "viewerCount": 3675,
+    "peakViewerCount": 5282,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:46.997Z"
+  },
+  {
+    "eventId": "evt-1543",
+    "viewerCount": 17983,
+    "peakViewerCount": 20818,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:36.979Z"
+  },
+  {
+    "eventId": "evt-1553",
+    "viewerCount": 5891,
+    "peakViewerCount": 7085,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:31.548Z"
+  },
+  {
+    "eventId": "evt-1570",
+    "viewerCount": 34887,
+    "peakViewerCount": 47415,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.568Z"
+  },
+  {
+    "eventId": "evt-1573",
+    "viewerCount": 30324,
+    "peakViewerCount": 37334,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:53.680Z"
+  },
+  {
+    "eventId": "evt-1578",
+    "viewerCount": 2420,
+    "peakViewerCount": 17214,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:38.678Z"
+  },
+  {
+    "eventId": "evt-1593",
+    "viewerCount": 44673,
+    "peakViewerCount": 45837,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:31.719Z"
+  },
+  {
+    "eventId": "evt-1600",
+    "viewerCount": 42388,
+    "peakViewerCount": 52710,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:56.455Z"
+  },
+  {
+    "eventId": "evt-1621",
+    "viewerCount": 18990,
+    "peakViewerCount": 19987,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.348Z"
+  },
+  {
+    "eventId": "evt-1623",
+    "viewerCount": 35791,
+    "peakViewerCount": 48762,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:37.806Z"
+  },
+  {
+    "eventId": "evt-1624",
+    "viewerCount": 44574,
+    "peakViewerCount": 55560,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:44.165Z"
+  },
+  {
+    "eventId": "evt-1627",
+    "viewerCount": 8182,
+    "peakViewerCount": 13663,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:36.597Z"
+  },
+  {
+    "eventId": "evt-1643",
+    "viewerCount": 23273,
+    "peakViewerCount": 37790,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:28.986Z"
+  },
+  {
+    "eventId": "evt-1660",
+    "viewerCount": 21051,
+    "peakViewerCount": 28975,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:44.904Z"
+  },
+  {
+    "eventId": "evt-1668",
+    "viewerCount": 40470,
+    "peakViewerCount": 46479,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:46.634Z"
+  },
+  {
+    "eventId": "evt-1669",
+    "viewerCount": 34551,
+    "peakViewerCount": 36397,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:50.501Z"
+  },
+  {
+    "eventId": "evt-1672",
+    "viewerCount": 2958,
+    "peakViewerCount": 6483,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:57.190Z"
+  },
+  {
+    "eventId": "evt-1675",
+    "viewerCount": 6704,
+    "peakViewerCount": 13682,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:39.905Z"
+  },
+  {
+    "eventId": "evt-1681",
+    "viewerCount": 7908,
+    "peakViewerCount": 10727,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:50.862Z"
+  },
+  {
+    "eventId": "evt-1689",
+    "viewerCount": 39364,
+    "peakViewerCount": 41668,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.425Z"
+  },
+  {
+    "eventId": "evt-1692",
+    "viewerCount": 17904,
+    "peakViewerCount": 27730,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.254Z"
+  },
+  {
+    "eventId": "evt-1710",
+    "viewerCount": 37243,
+    "peakViewerCount": 48955,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:40.666Z"
+  },
+  {
+    "eventId": "evt-1716",
+    "viewerCount": 19818,
+    "peakViewerCount": 34602,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.765Z"
+  },
+  {
+    "eventId": "evt-1724",
+    "viewerCount": 19009,
+    "peakViewerCount": 32695,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:31.015Z"
+  },
+  {
+    "eventId": "evt-1727",
+    "viewerCount": 39453,
+    "peakViewerCount": 52114,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.893Z"
+  },
+  {
+    "eventId": "evt-1734",
+    "viewerCount": 44266,
+    "peakViewerCount": 53927,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:51.547Z"
+  },
+  {
+    "eventId": "evt-1738",
+    "viewerCount": 1244,
+    "peakViewerCount": 8284,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.969Z"
+  },
+  {
+    "eventId": "evt-1748",
+    "viewerCount": 2194,
+    "peakViewerCount": 2687,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:43.557Z"
+  },
+  {
+    "eventId": "evt-1772",
+    "viewerCount": 11338,
+    "peakViewerCount": 22842,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:49.171Z"
+  },
+  {
+    "eventId": "evt-1792",
+    "viewerCount": 10641,
+    "peakViewerCount": 23673,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:46.994Z"
+  },
+  {
+    "eventId": "evt-1794",
+    "viewerCount": 14293,
+    "peakViewerCount": 27463,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.978Z"
+  },
+  {
+    "eventId": "evt-1810",
+    "viewerCount": 3673,
+    "peakViewerCount": 12258,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.542Z"
+  },
+  {
+    "eventId": "evt-1814",
+    "viewerCount": 37784,
+    "peakViewerCount": 44342,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.243Z"
+  },
+  {
+    "eventId": "evt-1843",
+    "viewerCount": 5326,
+    "peakViewerCount": 7559,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:31.263Z"
+  },
+  {
+    "eventId": "evt-1864",
+    "viewerCount": 18073,
+    "peakViewerCount": 18582,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.499Z"
+  },
+  {
+    "eventId": "evt-1866",
+    "viewerCount": 27990,
+    "peakViewerCount": 33760,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:50.434Z"
+  },
+  {
+    "eventId": "evt-1877",
+    "viewerCount": 13109,
+    "peakViewerCount": 14443,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:28.496Z"
+  },
+  {
+    "eventId": "evt-1884",
+    "viewerCount": 1354,
+    "peakViewerCount": 3289,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:44.125Z"
+  },
+  {
+    "eventId": "evt-1889",
+    "viewerCount": 31152,
+    "peakViewerCount": 44812,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:27.614Z"
+  },
+  {
+    "eventId": "evt-1905",
+    "viewerCount": 25179,
+    "peakViewerCount": 26450,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:47.088Z"
+  },
+  {
+    "eventId": "evt-1908",
+    "viewerCount": 4910,
+    "peakViewerCount": 12957,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.886Z"
+  },
+  {
+    "eventId": "evt-1927",
+    "viewerCount": 26395,
+    "peakViewerCount": 40753,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.461Z"
+  },
+  {
+    "eventId": "evt-1944",
+    "viewerCount": 36721,
+    "peakViewerCount": 47562,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:53.764Z"
+  },
+  {
+    "eventId": "evt-1946",
+    "viewerCount": 36027,
+    "peakViewerCount": 47251,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:50.732Z"
+  },
+  {
+    "eventId": "evt-1968",
+    "viewerCount": 4313,
+    "peakViewerCount": 15862,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:32.137Z"
+  },
+  {
+    "eventId": "evt-1977",
+    "viewerCount": 43275,
+    "peakViewerCount": 54937,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:39.481Z"
+  },
+  {
+    "eventId": "evt-1983",
+    "viewerCount": 27830,
+    "peakViewerCount": 40115,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:42.580Z"
+  },
+  {
+    "eventId": "evt-1985",
+    "viewerCount": 3928,
+    "peakViewerCount": 15507,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:51.623Z"
+  },
+  {
+    "eventId": "evt-1986",
+    "viewerCount": 6019,
+    "peakViewerCount": 10534,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:28.127Z"
+  },
+  {
+    "eventId": "evt-2002",
+    "viewerCount": 10698,
+    "peakViewerCount": 20239,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:50.892Z"
+  },
+  {
+    "eventId": "evt-2008",
+    "viewerCount": 2810,
+    "peakViewerCount": 12835,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.584Z"
+  },
+  {
+    "eventId": "evt-2020",
+    "viewerCount": 16925,
+    "peakViewerCount": 21384,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:31.532Z"
+  },
+  {
+    "eventId": "evt-2055",
+    "viewerCount": 4847,
+    "peakViewerCount": 16811,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:51.643Z"
+  },
+  {
+    "eventId": "evt-2075",
+    "viewerCount": 29417,
+    "peakViewerCount": 42499,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:47.120Z"
+  },
+  {
+    "eventId": "evt-2077",
+    "viewerCount": 19975,
+    "peakViewerCount": 21501,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:29.303Z"
+  },
+  {
+    "eventId": "evt-2079",
+    "viewerCount": 1283,
+    "peakViewerCount": 9058,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:29.746Z"
+  },
+  {
+    "eventId": "evt-2109",
+    "viewerCount": 34473,
+    "peakViewerCount": 35626,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:44.291Z"
+  },
+  {
+    "eventId": "evt-2113",
+    "viewerCount": 42289,
+    "peakViewerCount": 42805,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:55.616Z"
+  },
+  {
+    "eventId": "evt-2116",
+    "viewerCount": 29241,
+    "peakViewerCount": 41922,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:54.595Z"
+  },
+  {
+    "eventId": "evt-2125",
+    "viewerCount": 42505,
+    "peakViewerCount": 49513,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.846Z"
+  },
+  {
+    "eventId": "evt-2132",
+    "viewerCount": 31711,
+    "peakViewerCount": 39774,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.156Z"
+  },
+  {
+    "eventId": "evt-2153",
+    "viewerCount": 35344,
+    "peakViewerCount": 43114,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:37.607Z"
+  },
+  {
+    "eventId": "evt-2190",
+    "viewerCount": 680,
+    "peakViewerCount": 1203,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.644Z"
+  },
+  {
+    "eventId": "evt-2192",
+    "viewerCount": 8245,
+    "peakViewerCount": 20283,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:27.963Z"
+  },
+  {
+    "eventId": "evt-2193",
+    "viewerCount": 22838,
+    "peakViewerCount": 30621,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:42.845Z"
+  },
+  {
+    "eventId": "evt-2198",
+    "viewerCount": 18555,
+    "peakViewerCount": 19096,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:40.524Z"
+  },
+  {
+    "eventId": "evt-2223",
+    "viewerCount": 963,
+    "peakViewerCount": 3055,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:35.656Z"
+  },
+  {
+    "eventId": "evt-2225",
+    "viewerCount": 40645,
+    "peakViewerCount": 42853,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:42.745Z"
+  },
+  {
+    "eventId": "evt-2226",
+    "viewerCount": 11796,
+    "peakViewerCount": 17882,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:53.234Z"
+  },
+  {
+    "eventId": "evt-2239",
+    "viewerCount": 22459,
+    "peakViewerCount": 24513,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:43.712Z"
+  },
+  {
+    "eventId": "evt-2261",
+    "viewerCount": 8966,
+    "peakViewerCount": 13411,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:56.802Z"
+  },
+  {
+    "eventId": "evt-2279",
+    "viewerCount": 11165,
+    "peakViewerCount": 24712,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:28.873Z"
+  },
+  {
+    "eventId": "evt-2281",
+    "viewerCount": 32917,
+    "peakViewerCount": 34862,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:33.358Z"
+  },
+  {
+    "eventId": "evt-2302",
+    "viewerCount": 23119,
+    "peakViewerCount": 27362,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:56.527Z"
+  },
+  {
+    "eventId": "evt-2308",
+    "viewerCount": 15834,
+    "peakViewerCount": 15961,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:55.322Z"
+  },
+  {
+    "eventId": "evt-2310",
+    "viewerCount": 33397,
+    "peakViewerCount": 42170,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:29.883Z"
+  },
+  {
+    "eventId": "evt-2312",
+    "viewerCount": 29810,
+    "peakViewerCount": 32022,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.091Z"
+  },
+  {
+    "eventId": "evt-2338",
+    "viewerCount": 31163,
+    "peakViewerCount": 35701,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:52.325Z"
+  },
+  {
+    "eventId": "evt-2340",
+    "viewerCount": 30953,
+    "peakViewerCount": 34844,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:36.093Z"
+  },
+  {
+    "eventId": "evt-2356",
+    "viewerCount": 40948,
+    "peakViewerCount": 47668,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:52.136Z"
+  },
+  {
+    "eventId": "evt-2359",
+    "viewerCount": 27795,
+    "peakViewerCount": 38990,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:29.536Z"
+  },
+  {
+    "eventId": "evt-2370",
+    "viewerCount": 10717,
+    "peakViewerCount": 19750,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:49.426Z"
+  },
+  {
+    "eventId": "evt-2389",
+    "viewerCount": 8348,
+    "peakViewerCount": 15691,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:44.404Z"
+  },
+  {
+    "eventId": "evt-2402",
+    "viewerCount": 29911,
+    "peakViewerCount": 40013,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.850Z"
+  },
+  {
+    "eventId": "evt-2412",
+    "viewerCount": 18328,
+    "peakViewerCount": 19880,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.489Z"
+  },
+  {
+    "eventId": "evt-2426",
+    "viewerCount": 20165,
+    "peakViewerCount": 20461,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:47.684Z"
+  },
+  {
+    "eventId": "evt-2442",
+    "viewerCount": 37254,
+    "peakViewerCount": 41263,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:49.868Z"
+  },
+  {
+    "eventId": "evt-2444",
+    "viewerCount": 38115,
+    "peakViewerCount": 44225,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:28.908Z"
+  },
+  {
+    "eventId": "evt-2445",
+    "viewerCount": 44865,
+    "peakViewerCount": 53787,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:35.886Z"
+  },
+  {
+    "eventId": "evt-2455",
+    "viewerCount": 33830,
+    "peakViewerCount": 36871,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:27.907Z"
+  },
+  {
+    "eventId": "evt-2465",
+    "viewerCount": 9227,
+    "peakViewerCount": 19373,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:30.085Z"
+  },
+  {
+    "eventId": "evt-2475",
+    "viewerCount": 45185,
+    "peakViewerCount": 57714,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:44.735Z"
+  },
+  {
+    "eventId": "evt-2498",
+    "viewerCount": 30362,
+    "peakViewerCount": 40297,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:41.036Z"
+  },
+  {
+    "eventId": "evt-2515",
+    "viewerCount": 29304,
+    "peakViewerCount": 38179,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:41.919Z"
+  },
+  {
+    "eventId": "evt-2521",
+    "viewerCount": 7560,
+    "peakViewerCount": 13946,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:51.288Z"
+  },
+  {
+    "eventId": "evt-2525",
+    "viewerCount": 9161,
+    "peakViewerCount": 19102,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:50.584Z"
+  },
+  {
+    "eventId": "evt-2529",
+    "viewerCount": 12658,
+    "peakViewerCount": 13199,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.793Z"
+  },
+  {
+    "eventId": "evt-2530",
+    "viewerCount": 18684,
+    "peakViewerCount": 22857,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:44.787Z"
+  },
+  {
+    "eventId": "evt-2532",
+    "viewerCount": 19325,
+    "peakViewerCount": 33424,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:31.808Z"
+  },
+  {
+    "eventId": "evt-2534",
+    "viewerCount": 44931,
+    "peakViewerCount": 49197,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:49.530Z"
+  },
+  {
+    "eventId": "evt-2550",
+    "viewerCount": 8907,
+    "peakViewerCount": 13778,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:42.030Z"
+  },
+  {
+    "eventId": "evt-2570",
+    "viewerCount": 15063,
+    "peakViewerCount": 29826,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.769Z"
+  },
+  {
+    "eventId": "evt-2573",
+    "viewerCount": 26538,
+    "peakViewerCount": 37855,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.910Z"
+  },
+  {
+    "eventId": "evt-2578",
+    "viewerCount": 31113,
+    "peakViewerCount": 39812,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:39.321Z"
+  },
+  {
+    "eventId": "evt-2594",
+    "viewerCount": 43784,
+    "peakViewerCount": 48266,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:56.407Z"
+  },
+  {
+    "eventId": "evt-2604",
+    "viewerCount": 5983,
+    "peakViewerCount": 16956,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:32.717Z"
+  },
+  {
+    "eventId": "evt-2606",
+    "viewerCount": 39616,
+    "peakViewerCount": 42315,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:48.451Z"
+  },
+  {
+    "eventId": "evt-2611",
+    "viewerCount": 9495,
+    "peakViewerCount": 20017,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:40.948Z"
+  },
+  {
+    "eventId": "evt-2615",
+    "viewerCount": 1384,
+    "peakViewerCount": 16363,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:33.582Z"
+  },
+  {
+    "eventId": "evt-2616",
+    "viewerCount": 775,
+    "peakViewerCount": 14190,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:49.634Z"
+  },
+  {
+    "eventId": "evt-2630",
+    "viewerCount": 23373,
+    "peakViewerCount": 35050,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:30.187Z"
+  },
+  {
+    "eventId": "evt-2636",
+    "viewerCount": 10645,
+    "peakViewerCount": 23766,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:37.882Z"
+  },
+  {
+    "eventId": "evt-2646",
+    "viewerCount": 1102,
+    "peakViewerCount": 1785,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:47.268Z"
+  },
+  {
+    "eventId": "evt-2666",
+    "viewerCount": 23564,
+    "peakViewerCount": 31731,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:27.971Z"
+  },
+  {
+    "eventId": "evt-2667",
+    "viewerCount": 38485,
+    "peakViewerCount": 50468,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:32.355Z"
+  },
+  {
+    "eventId": "evt-2687",
+    "viewerCount": 4272,
+    "peakViewerCount": 8753,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:56.587Z"
+  },
+  {
+    "eventId": "evt-2697",
+    "viewerCount": 14257,
+    "peakViewerCount": 27813,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.451Z"
+  },
+  {
+    "eventId": "evt-2699",
+    "viewerCount": 11777,
+    "peakViewerCount": 22804,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:41.995Z"
+  },
+  {
+    "eventId": "evt-2719",
+    "viewerCount": 38523,
+    "peakViewerCount": 50707,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:33.228Z"
+  },
+  {
+    "eventId": "evt-2721",
+    "viewerCount": 4444,
+    "peakViewerCount": 18885,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:55.792Z"
+  },
+  {
+    "eventId": "evt-2722",
+    "viewerCount": 29162,
+    "peakViewerCount": 32511,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.217Z"
+  },
+  {
+    "eventId": "evt-2736",
+    "viewerCount": 16532,
+    "peakViewerCount": 20077,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:42.585Z"
+  },
+  {
+    "eventId": "evt-2741",
+    "viewerCount": 34197,
+    "peakViewerCount": 36901,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:35.081Z"
+  },
+  {
+    "eventId": "evt-2749",
+    "viewerCount": 5702,
+    "peakViewerCount": 14759,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:33.165Z"
+  },
+  {
+    "eventId": "evt-2753",
+    "viewerCount": 27170,
+    "peakViewerCount": 39370,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:38.806Z"
+  },
+  {
+    "eventId": "evt-2775",
+    "viewerCount": 26499,
+    "peakViewerCount": 38844,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:29.998Z"
+  },
+  {
+    "eventId": "evt-2778",
+    "viewerCount": 7468,
+    "peakViewerCount": 10970,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:33.134Z"
+  },
+  {
+    "eventId": "evt-2793",
+    "viewerCount": 14623,
+    "peakViewerCount": 26930,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:34.654Z"
+  },
+  {
+    "eventId": "evt-2804",
+    "viewerCount": 9623,
+    "peakViewerCount": 18077,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:53.701Z"
+  },
+  {
+    "eventId": "evt-2816",
+    "viewerCount": 16481,
+    "peakViewerCount": 16943,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:30.246Z"
+  },
+  {
+    "eventId": "evt-2823",
+    "viewerCount": 9631,
+    "peakViewerCount": 21616,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:56.126Z"
+  },
+  {
+    "eventId": "evt-2832",
+    "viewerCount": 32925,
+    "peakViewerCount": 43799,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:42.164Z"
+  },
+  {
+    "eventId": "evt-2836",
+    "viewerCount": 35045,
+    "peakViewerCount": 39933,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:30.371Z"
+  },
+  {
+    "eventId": "evt-2841",
+    "viewerCount": 26224,
+    "peakViewerCount": 35082,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:51.052Z"
+  },
+  {
+    "eventId": "evt-2843",
+    "viewerCount": 25164,
+    "peakViewerCount": 34402,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.639Z"
+  },
+  {
+    "eventId": "evt-2846",
+    "viewerCount": 2957,
+    "peakViewerCount": 16803,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:51.253Z"
+  },
+  {
+    "eventId": "evt-2859",
+    "viewerCount": 9776,
+    "peakViewerCount": 18886,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:31.697Z"
+  },
+  {
+    "eventId": "evt-2861",
+    "viewerCount": 30062,
+    "peakViewerCount": 35010,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.896Z"
+  },
+  {
+    "eventId": "evt-2863",
+    "viewerCount": 25699,
+    "peakViewerCount": 33414,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:41.442Z"
+  },
+  {
+    "eventId": "evt-2880",
+    "viewerCount": 16690,
+    "peakViewerCount": 23934,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:53.651Z"
+  },
+  {
+    "eventId": "evt-2887",
+    "viewerCount": 3202,
+    "peakViewerCount": 11338,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:45.697Z"
+  },
+  {
+    "eventId": "evt-2890",
+    "viewerCount": 11753,
+    "peakViewerCount": 22950,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:52.326Z"
+  },
+  {
+    "eventId": "evt-2907",
+    "viewerCount": 8879,
+    "peakViewerCount": 12038,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:56.730Z"
+  },
+  {
+    "eventId": "evt-2914",
+    "viewerCount": 15654,
+    "peakViewerCount": 19884,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:48.661Z"
+  },
+  {
+    "eventId": "evt-2920",
+    "viewerCount": 13552,
+    "peakViewerCount": 19380,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.926Z"
+  },
+  {
+    "eventId": "evt-2925",
+    "viewerCount": 20232,
+    "peakViewerCount": 32475,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:49.283Z"
+  },
+  {
+    "eventId": "evt-2962",
+    "viewerCount": 3310,
+    "peakViewerCount": 7858,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:41.262Z"
+  },
+  {
+    "eventId": "evt-2981",
+    "viewerCount": 33591,
+    "peakViewerCount": 36644,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:46.216Z"
+  },
+  {
+    "eventId": "evt-3041",
+    "viewerCount": 11895,
+    "peakViewerCount": 20439,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:47.170Z"
+  },
+  {
+    "eventId": "evt-3051",
+    "viewerCount": 1922,
+    "peakViewerCount": 11516,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.450Z"
+  },
+  {
+    "eventId": "evt-3062",
+    "viewerCount": 32390,
+    "peakViewerCount": 32879,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:52.532Z"
+  },
+  {
+    "eventId": "evt-3093",
+    "viewerCount": 28263,
+    "peakViewerCount": 31345,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:39.287Z"
+  },
+  {
+    "eventId": "evt-3095",
+    "viewerCount": 29914,
+    "peakViewerCount": 31228,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.383Z"
+  },
+  {
+    "eventId": "evt-3119",
+    "viewerCount": 37873,
+    "peakViewerCount": 52112,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:30.404Z"
+  },
+  {
+    "eventId": "evt-3128",
+    "viewerCount": 9699,
+    "peakViewerCount": 16455,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:43.086Z"
+  },
+  {
+    "eventId": "evt-3134",
+    "viewerCount": 17918,
+    "peakViewerCount": 32031,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.469Z"
+  },
+  {
+    "eventId": "evt-3145",
+    "viewerCount": 42876,
+    "peakViewerCount": 43995,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.065Z"
+  },
+  {
+    "eventId": "evt-3146",
+    "viewerCount": 21504,
+    "peakViewerCount": 33464,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:41.917Z"
+  },
+  {
+    "eventId": "evt-3158",
+    "viewerCount": 5521,
+    "peakViewerCount": 12878,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.018Z"
+  },
+  {
+    "eventId": "evt-3161",
+    "viewerCount": 4509,
+    "peakViewerCount": 11917,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:27.925Z"
+  },
+  {
+    "eventId": "evt-3163",
+    "viewerCount": 9024,
+    "peakViewerCount": 22665,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:47.425Z"
+  },
+  {
+    "eventId": "evt-3191",
+    "viewerCount": 10343,
+    "peakViewerCount": 10424,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.451Z"
+  },
+  {
+    "eventId": "evt-3192",
+    "viewerCount": 3539,
+    "peakViewerCount": 6825,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:47.017Z"
+  },
+  {
+    "eventId": "evt-3204",
+    "viewerCount": 13545,
+    "peakViewerCount": 15244,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:43.927Z"
+  },
+  {
+    "eventId": "evt-3206",
+    "viewerCount": 30570,
+    "peakViewerCount": 44556,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:54.517Z"
+  },
+  {
+    "eventId": "evt-3223",
+    "viewerCount": 7031,
+    "peakViewerCount": 7499,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:28.886Z"
+  },
+  {
+    "eventId": "evt-3225",
+    "viewerCount": 12340,
+    "peakViewerCount": 12384,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.706Z"
+  },
+  {
+    "eventId": "evt-3232",
+    "viewerCount": 20697,
+    "peakViewerCount": 28274,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:49.056Z"
+  },
+  {
+    "eventId": "evt-3247",
+    "viewerCount": 11692,
+    "peakViewerCount": 15009,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:49.165Z"
+  },
+  {
+    "eventId": "evt-3248",
+    "viewerCount": 22073,
+    "peakViewerCount": 22829,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:35.874Z"
+  },
+  {
+    "eventId": "evt-3258",
+    "viewerCount": 43270,
+    "peakViewerCount": 53712,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:27.571Z"
+  },
+  {
+    "eventId": "evt-3260",
+    "viewerCount": 310,
+    "peakViewerCount": 12418,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:40.163Z"
+  },
+  {
+    "eventId": "evt-3267",
+    "viewerCount": 26558,
+    "peakViewerCount": 35847,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:43.423Z"
+  },
+  {
+    "eventId": "evt-3272",
+    "viewerCount": 9702,
+    "peakViewerCount": 11128,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:34.494Z"
+  },
+  {
+    "eventId": "evt-3273",
+    "viewerCount": 6693,
+    "peakViewerCount": 21239,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.111Z"
+  },
+  {
+    "eventId": "evt-3275",
+    "viewerCount": 32408,
+    "peakViewerCount": 34353,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:40.335Z"
+  },
+  {
+    "eventId": "evt-3283",
+    "viewerCount": 4288,
+    "peakViewerCount": 12926,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:35.540Z"
+  },
+  {
+    "eventId": "evt-3292",
+    "viewerCount": 42126,
+    "peakViewerCount": 55885,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.363Z"
+  },
+  {
+    "eventId": "evt-3322",
+    "viewerCount": 17863,
+    "peakViewerCount": 27669,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:43.247Z"
+  },
+  {
+    "eventId": "evt-3336",
+    "viewerCount": 9257,
+    "peakViewerCount": 16360,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:44.438Z"
+  },
+  {
+    "eventId": "evt-3339",
+    "viewerCount": 22646,
+    "peakViewerCount": 27141,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:51.198Z"
+  },
+  {
+    "eventId": "evt-3342",
+    "viewerCount": 21428,
+    "peakViewerCount": 26284,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:31.918Z"
+  },
+  {
+    "eventId": "evt-3365",
+    "viewerCount": 23114,
+    "peakViewerCount": 27919,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:52.134Z"
+  },
+  {
+    "eventId": "evt-3373",
+    "viewerCount": 22055,
+    "peakViewerCount": 22554,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:47.845Z"
+  },
+  {
+    "eventId": "evt-3379",
+    "viewerCount": 38162,
+    "peakViewerCount": 48448,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:35.812Z"
+  },
+  {
+    "eventId": "evt-3386",
+    "viewerCount": 41371,
+    "peakViewerCount": 52816,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:31.845Z"
+  },
+  {
+    "eventId": "evt-3399",
+    "viewerCount": 38951,
+    "peakViewerCount": 40541,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:42.875Z"
+  },
+  {
+    "eventId": "evt-3403",
+    "viewerCount": 10047,
+    "peakViewerCount": 16689,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.203Z"
+  },
+  {
+    "eventId": "evt-3406",
+    "viewerCount": 1964,
+    "peakViewerCount": 4295,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:44.678Z"
+  },
+  {
+    "eventId": "evt-3411",
+    "viewerCount": 22271,
+    "peakViewerCount": 22877,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:29.157Z"
+  },
+  {
+    "eventId": "evt-3412",
+    "viewerCount": 19159,
+    "peakViewerCount": 27653,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:27.889Z"
+  },
+  {
+    "eventId": "evt-3425",
+    "viewerCount": 20930,
+    "peakViewerCount": 31735,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:29.114Z"
+  },
+  {
+    "eventId": "evt-3439",
+    "viewerCount": 8177,
+    "peakViewerCount": 18503,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.713Z"
+  },
+  {
+    "eventId": "evt-3443",
+    "viewerCount": 24322,
+    "peakViewerCount": 37192,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.195Z"
+  },
+  {
+    "eventId": "evt-3453",
+    "viewerCount": 30685,
+    "peakViewerCount": 35960,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.906Z"
+  },
+  {
+    "eventId": "evt-3454",
+    "viewerCount": 31098,
+    "peakViewerCount": 45942,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:52.023Z"
+  },
+  {
+    "eventId": "evt-3459",
+    "viewerCount": 24988,
+    "peakViewerCount": 27617,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.833Z"
+  },
+  {
+    "eventId": "evt-3467",
+    "viewerCount": 38983,
+    "peakViewerCount": 48100,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:29.502Z"
+  },
+  {
+    "eventId": "evt-3468",
+    "viewerCount": 29337,
+    "peakViewerCount": 36015,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:50.255Z"
+  },
+  {
+    "eventId": "evt-3472",
+    "viewerCount": 2502,
+    "peakViewerCount": 16545,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.731Z"
+  },
+  {
+    "eventId": "evt-3481",
+    "viewerCount": 5486,
+    "peakViewerCount": 20040,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:56.107Z"
+  },
+  {
+    "eventId": "evt-3486",
+    "viewerCount": 36648,
+    "peakViewerCount": 44170,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.567Z"
+  },
+  {
+    "eventId": "evt-3490",
+    "viewerCount": 9347,
+    "peakViewerCount": 22333,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.910Z"
+  },
+  {
+    "eventId": "evt-3491",
+    "viewerCount": 9203,
+    "peakViewerCount": 22155,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:28.926Z"
+  },
+  {
+    "eventId": "evt-3500",
+    "viewerCount": 41611,
+    "peakViewerCount": 52352,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:40.593Z"
+  },
+  {
+    "eventId": "evt-3508",
+    "viewerCount": 13248,
+    "peakViewerCount": 14372,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:40.342Z"
+  },
+  {
+    "eventId": "evt-3512",
+    "viewerCount": 39426,
+    "peakViewerCount": 47125,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.146Z"
+  },
+  {
+    "eventId": "evt-3516",
+    "viewerCount": 12777,
+    "peakViewerCount": 19362,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:49.526Z"
+  },
+  {
+    "eventId": "evt-3519",
+    "viewerCount": 38355,
+    "peakViewerCount": 44054,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.046Z"
+  },
+  {
+    "eventId": "evt-3546",
+    "viewerCount": 43047,
+    "peakViewerCount": 56787,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.157Z"
+  },
+  {
+    "eventId": "evt-3550",
+    "viewerCount": 6397,
+    "peakViewerCount": 8517,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:40.333Z"
+  },
+  {
+    "eventId": "evt-3554",
+    "viewerCount": 41951,
+    "peakViewerCount": 56939,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.576Z"
+  },
+  {
+    "eventId": "evt-3556",
+    "viewerCount": 19907,
+    "peakViewerCount": 22653,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.517Z"
+  },
+  {
+    "eventId": "evt-3591",
+    "viewerCount": 21145,
+    "peakViewerCount": 32558,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:55.095Z"
+  },
+  {
+    "eventId": "evt-3598",
+    "viewerCount": 14328,
+    "peakViewerCount": 21718,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:52.894Z"
+  },
+  {
+    "eventId": "evt-3633",
+    "viewerCount": 43627,
+    "peakViewerCount": 48984,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:41.014Z"
+  },
+  {
+    "eventId": "evt-3636",
+    "viewerCount": 18133,
+    "peakViewerCount": 28654,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:55.111Z"
+  },
+  {
+    "eventId": "evt-3639",
+    "viewerCount": 21708,
+    "peakViewerCount": 36461,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:31.415Z"
+  },
+  {
+    "eventId": "evt-3649",
+    "viewerCount": 25474,
+    "peakViewerCount": 37783,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:36.214Z"
+  },
+  {
+    "eventId": "evt-3657",
+    "viewerCount": 22865,
+    "peakViewerCount": 28797,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:43.761Z"
+  },
+  {
+    "eventId": "evt-3667",
+    "viewerCount": 5996,
+    "peakViewerCount": 13793,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:39.507Z"
+  },
+  {
+    "eventId": "evt-3685",
+    "viewerCount": 13445,
+    "peakViewerCount": 17856,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.119Z"
+  },
+  {
+    "eventId": "evt-3704",
+    "viewerCount": 7120,
+    "peakViewerCount": 14873,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:46.122Z"
+  },
+  {
+    "eventId": "evt-3706",
+    "viewerCount": 23506,
+    "peakViewerCount": 25866,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:40.658Z"
+  },
+  {
+    "eventId": "evt-3738",
+    "viewerCount": 15917,
+    "peakViewerCount": 22944,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:28.473Z"
+  },
+  {
+    "eventId": "evt-3739",
+    "viewerCount": 26730,
+    "peakViewerCount": 33878,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:29.805Z"
+  },
+  {
+    "eventId": "evt-3751",
+    "viewerCount": 23481,
+    "peakViewerCount": 30227,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:39.157Z"
+  },
+  {
+    "eventId": "evt-3768",
+    "viewerCount": 14036,
+    "peakViewerCount": 23701,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:53.194Z"
+  },
+  {
+    "eventId": "evt-3770",
+    "viewerCount": 22998,
+    "peakViewerCount": 36608,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:40.159Z"
+  },
+  {
+    "eventId": "evt-3776",
+    "viewerCount": 12286,
+    "peakViewerCount": 21048,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:33.757Z"
+  },
+  {
+    "eventId": "evt-3783",
+    "viewerCount": 6968,
+    "peakViewerCount": 11851,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:42.618Z"
+  },
+  {
+    "eventId": "evt-3785",
+    "viewerCount": 18700,
+    "peakViewerCount": 22231,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:38.899Z"
+  },
+  {
+    "eventId": "evt-3790",
+    "viewerCount": 27041,
+    "peakViewerCount": 41008,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.380Z"
+  },
+  {
+    "eventId": "evt-3792",
+    "viewerCount": 10231,
+    "peakViewerCount": 23416,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.193Z"
+  },
+  {
+    "eventId": "evt-3794",
+    "viewerCount": 11491,
+    "peakViewerCount": 23170,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:35.900Z"
+  },
+  {
+    "eventId": "evt-3803",
+    "viewerCount": 1502,
+    "peakViewerCount": 14217,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:33.364Z"
+  },
+  {
+    "eventId": "evt-3822",
+    "viewerCount": 10780,
+    "peakViewerCount": 16635,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:55.739Z"
+  },
+  {
+    "eventId": "evt-3830",
+    "viewerCount": 31364,
+    "peakViewerCount": 41595,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.046Z"
+  },
+  {
+    "eventId": "evt-3831",
+    "viewerCount": 32857,
+    "peakViewerCount": 41576,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:29.533Z"
+  },
+  {
+    "eventId": "evt-3852",
+    "viewerCount": 20667,
+    "peakViewerCount": 21657,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:34.315Z"
+  },
+  {
+    "eventId": "evt-3860",
+    "viewerCount": 8491,
+    "peakViewerCount": 8698,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:40.347Z"
+  },
+  {
+    "eventId": "evt-3863",
+    "viewerCount": 37127,
+    "peakViewerCount": 38448,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:30.608Z"
+  },
+  {
+    "eventId": "evt-3888",
+    "viewerCount": 23331,
+    "peakViewerCount": 24646,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:47.575Z"
+  },
+  {
+    "eventId": "evt-3893",
+    "viewerCount": 16485,
+    "peakViewerCount": 28409,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:48.261Z"
+  },
+  {
+    "eventId": "evt-3894",
+    "viewerCount": 35212,
+    "peakViewerCount": 40438,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:40.505Z"
+  },
+  {
+    "eventId": "evt-3901",
+    "viewerCount": 8122,
+    "peakViewerCount": 11280,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:43.706Z"
+  },
+  {
+    "eventId": "evt-3907",
+    "viewerCount": 19220,
+    "peakViewerCount": 21990,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:51.328Z"
+  },
+  {
+    "eventId": "evt-3926",
+    "viewerCount": 3368,
+    "peakViewerCount": 7761,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.948Z"
+  },
+  {
+    "eventId": "evt-3955",
+    "viewerCount": 7110,
+    "peakViewerCount": 12911,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:52.774Z"
+  },
+  {
+    "eventId": "evt-3961",
+    "viewerCount": 22424,
+    "peakViewerCount": 32157,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:44.038Z"
+  },
+  {
+    "eventId": "evt-3974",
+    "viewerCount": 23915,
+    "peakViewerCount": 38454,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:39.660Z"
+  },
+  {
+    "eventId": "evt-4003",
+    "viewerCount": 25671,
+    "peakViewerCount": 31953,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:49.390Z"
+  },
+  {
+    "eventId": "evt-4008",
+    "viewerCount": 11320,
+    "peakViewerCount": 19533,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.869Z"
+  },
+  {
+    "eventId": "evt-4054",
+    "viewerCount": 14905,
+    "peakViewerCount": 20486,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:42.780Z"
+  },
+  {
+    "eventId": "evt-4095",
+    "viewerCount": 38090,
+    "peakViewerCount": 42023,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.197Z"
+  },
+  {
+    "eventId": "evt-4113",
+    "viewerCount": 3488,
+    "peakViewerCount": 3555,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:53.350Z"
+  },
+  {
+    "eventId": "evt-4119",
+    "viewerCount": 14581,
+    "peakViewerCount": 21133,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:34.273Z"
+  },
+  {
+    "eventId": "evt-4124",
+    "viewerCount": 9021,
+    "peakViewerCount": 15014,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:49.241Z"
+  },
+  {
+    "eventId": "evt-4126",
+    "viewerCount": 25576,
+    "peakViewerCount": 37781,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:50.412Z"
+  },
+  {
+    "eventId": "evt-4189",
+    "viewerCount": 14489,
+    "peakViewerCount": 23253,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:37.737Z"
+  },
+  {
+    "eventId": "evt-4199",
+    "viewerCount": 20363,
+    "peakViewerCount": 30892,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:45.694Z"
+  },
+  {
+    "eventId": "evt-4210",
+    "viewerCount": 44146,
+    "peakViewerCount": 57837,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:56.725Z"
+  },
+  {
+    "eventId": "evt-4218",
+    "viewerCount": 40176,
+    "peakViewerCount": 41904,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:55.236Z"
+  },
+  {
+    "eventId": "evt-4220",
+    "viewerCount": 17438,
+    "peakViewerCount": 32128,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.731Z"
+  },
+  {
+    "eventId": "evt-4234",
+    "viewerCount": 21667,
+    "peakViewerCount": 22554,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:51.496Z"
+  },
+  {
+    "eventId": "evt-4257",
+    "viewerCount": 15057,
+    "peakViewerCount": 25727,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:46.159Z"
+  },
+  {
+    "eventId": "evt-4262",
+    "viewerCount": 26984,
+    "peakViewerCount": 32055,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:53.788Z"
+  },
+  {
+    "eventId": "evt-4269",
+    "viewerCount": 21370,
+    "peakViewerCount": 29041,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.900Z"
+  },
+  {
+    "eventId": "evt-4280",
+    "viewerCount": 36316,
+    "peakViewerCount": 47581,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.436Z"
+  },
+  {
+    "eventId": "evt-4296",
+    "viewerCount": 9984,
+    "peakViewerCount": 24473,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:41.347Z"
+  },
+  {
+    "eventId": "evt-4307",
+    "viewerCount": 21357,
+    "peakViewerCount": 35122,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:41.813Z"
+  },
+  {
+    "eventId": "evt-4312",
+    "viewerCount": 12065,
+    "peakViewerCount": 13423,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:39.603Z"
+  },
+  {
+    "eventId": "evt-4327",
+    "viewerCount": 44353,
+    "peakViewerCount": 48259,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:35.752Z"
+  },
+  {
+    "eventId": "evt-4330",
+    "viewerCount": 27195,
+    "peakViewerCount": 39562,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:30.317Z"
+  },
+  {
+    "eventId": "evt-4331",
+    "viewerCount": 33807,
+    "peakViewerCount": 43778,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:30.553Z"
+  },
+  {
+    "eventId": "evt-4385",
+    "viewerCount": 12838,
+    "peakViewerCount": 19995,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:53.131Z"
+  },
+  {
+    "eventId": "evt-4390",
+    "viewerCount": 22995,
+    "peakViewerCount": 34700,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.770Z"
+  },
+  {
+    "eventId": "evt-4396",
+    "viewerCount": 20080,
+    "peakViewerCount": 31681,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:47.321Z"
+  },
+  {
+    "eventId": "evt-4401",
+    "viewerCount": 23869,
+    "peakViewerCount": 28263,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:55.700Z"
+  },
+  {
+    "eventId": "evt-4403",
+    "viewerCount": 17495,
+    "peakViewerCount": 25790,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.893Z"
+  },
+  {
+    "eventId": "evt-4405",
+    "viewerCount": 17092,
+    "peakViewerCount": 30099,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:36.743Z"
+  },
+  {
+    "eventId": "evt-4406",
+    "viewerCount": 40349,
+    "peakViewerCount": 50791,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:50.978Z"
+  },
+  {
+    "eventId": "evt-4423",
+    "viewerCount": 12521,
+    "peakViewerCount": 15581,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:39.829Z"
+  },
+  {
+    "eventId": "evt-4440",
+    "viewerCount": 41073,
+    "peakViewerCount": 52479,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:53.742Z"
+  },
+  {
+    "eventId": "evt-4443",
+    "viewerCount": 25858,
+    "peakViewerCount": 26365,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:36.659Z"
+  },
+  {
+    "eventId": "evt-4464",
+    "viewerCount": 17260,
+    "peakViewerCount": 31026,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:50.472Z"
+  },
+  {
+    "eventId": "evt-4480",
+    "viewerCount": 19954,
+    "peakViewerCount": 23882,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.004Z"
+  },
+  {
+    "eventId": "evt-4491",
+    "viewerCount": 23785,
+    "peakViewerCount": 34318,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:38.010Z"
+  },
+  {
+    "eventId": "evt-4494",
+    "viewerCount": 37227,
+    "peakViewerCount": 37441,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:55.454Z"
+  },
+  {
+    "eventId": "evt-4495",
+    "viewerCount": 35292,
+    "peakViewerCount": 44268,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:29.984Z"
+  },
+  {
+    "eventId": "evt-4515",
+    "viewerCount": 34889,
+    "peakViewerCount": 39023,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:53.495Z"
+  },
+  {
+    "eventId": "evt-4517",
+    "viewerCount": 15420,
+    "peakViewerCount": 27318,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:48.804Z"
+  },
+  {
+    "eventId": "evt-4520",
+    "viewerCount": 17988,
+    "peakViewerCount": 20041,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:48.067Z"
+  },
+  {
+    "eventId": "evt-4526",
+    "viewerCount": 44073,
+    "peakViewerCount": 49350,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:53.412Z"
+  },
+  {
+    "eventId": "evt-4533",
+    "viewerCount": 2021,
+    "peakViewerCount": 13961,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:27.878Z"
+  },
+  {
+    "eventId": "evt-4536",
+    "viewerCount": 34865,
+    "peakViewerCount": 39760,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:50.175Z"
+  },
+  {
+    "eventId": "evt-4552",
+    "viewerCount": 8990,
+    "peakViewerCount": 17430,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:37.349Z"
+  },
+  {
+    "eventId": "evt-4553",
+    "viewerCount": 6147,
+    "peakViewerCount": 20825,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:28.013Z"
+  },
+  {
+    "eventId": "evt-4557",
+    "viewerCount": 6996,
+    "peakViewerCount": 10674,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:31.055Z"
+  },
+  {
+    "eventId": "evt-4559",
+    "viewerCount": 11387,
+    "peakViewerCount": 23850,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:48.089Z"
+  },
+  {
+    "eventId": "evt-4561",
+    "viewerCount": 32375,
+    "peakViewerCount": 38413,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.634Z"
+  },
+  {
+    "eventId": "evt-4577",
+    "viewerCount": 41716,
+    "peakViewerCount": 56543,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:35.552Z"
+  },
+  {
+    "eventId": "evt-4589",
+    "viewerCount": 10980,
+    "peakViewerCount": 25161,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:37.835Z"
+  },
+  {
+    "eventId": "evt-4608",
+    "viewerCount": 17909,
+    "peakViewerCount": 18297,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.886Z"
+  },
+  {
+    "eventId": "evt-4623",
+    "viewerCount": 13913,
+    "peakViewerCount": 26325,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:51.584Z"
+  },
+  {
+    "eventId": "evt-4624",
+    "viewerCount": 40780,
+    "peakViewerCount": 43843,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:54.048Z"
+  },
+  {
+    "eventId": "evt-4637",
+    "viewerCount": 2868,
+    "peakViewerCount": 12306,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:57.378Z"
+  },
+  {
+    "eventId": "evt-4649",
+    "viewerCount": 32084,
+    "peakViewerCount": 35123,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:50.906Z"
+  },
+  {
+    "eventId": "evt-4651",
+    "viewerCount": 33422,
+    "peakViewerCount": 46530,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:43.572Z"
+  },
+  {
+    "eventId": "evt-4661",
+    "viewerCount": 15319,
+    "peakViewerCount": 24277,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:42.278Z"
+  },
+  {
+    "eventId": "evt-4669",
+    "viewerCount": 17409,
+    "peakViewerCount": 18187,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:53.488Z"
+  },
+  {
+    "eventId": "evt-4676",
+    "viewerCount": 1429,
+    "peakViewerCount": 14918,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:52.666Z"
+  },
+  {
+    "eventId": "evt-4698",
+    "viewerCount": 44599,
+    "peakViewerCount": 49615,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:29.092Z"
+  },
+  {
+    "eventId": "evt-4703",
+    "viewerCount": 9943,
+    "peakViewerCount": 20656,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.657Z"
+  },
+  {
+    "eventId": "evt-4718",
+    "viewerCount": 17435,
+    "peakViewerCount": 21901,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:33.973Z"
+  },
+  {
+    "eventId": "evt-4728",
+    "viewerCount": 9298,
+    "peakViewerCount": 13715,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:43.902Z"
+  },
+  {
+    "eventId": "evt-4730",
+    "viewerCount": 32876,
+    "peakViewerCount": 43290,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:47.515Z"
+  },
+  {
+    "eventId": "evt-4738",
+    "viewerCount": 15878,
+    "peakViewerCount": 23838,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:37.973Z"
+  },
+  {
+    "eventId": "evt-4740",
+    "viewerCount": 42458,
+    "peakViewerCount": 49681,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:44.100Z"
+  },
+  {
+    "eventId": "evt-4745",
+    "viewerCount": 27461,
+    "peakViewerCount": 36536,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:37.006Z"
+  },
+  {
+    "eventId": "evt-4760",
+    "viewerCount": 30397,
+    "peakViewerCount": 39673,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.226Z"
+  },
+  {
+    "eventId": "evt-4774",
+    "viewerCount": 19924,
+    "peakViewerCount": 20911,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:54.713Z"
+  },
+  {
+    "eventId": "evt-4789",
+    "viewerCount": 39037,
+    "peakViewerCount": 40811,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:53.464Z"
+  },
+  {
+    "eventId": "evt-4791",
+    "viewerCount": 20463,
+    "peakViewerCount": 32052,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:48.473Z"
+  },
+  {
+    "eventId": "evt-4793",
+    "viewerCount": 24272,
+    "peakViewerCount": 32889,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:56.318Z"
+  },
+  {
+    "eventId": "evt-4803",
+    "viewerCount": 19804,
+    "peakViewerCount": 31367,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:30.169Z"
+  },
+  {
+    "eventId": "evt-4808",
+    "viewerCount": 36883,
+    "peakViewerCount": 40805,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:42.624Z"
+  },
+  {
+    "eventId": "evt-4812",
+    "viewerCount": 6143,
+    "peakViewerCount": 17912,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:49.357Z"
+  },
+  {
+    "eventId": "evt-4816",
+    "viewerCount": 40010,
+    "peakViewerCount": 49189,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:35.400Z"
+  },
+  {
+    "eventId": "evt-4821",
+    "viewerCount": 13009,
+    "peakViewerCount": 22061,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.228Z"
+  },
+  {
+    "eventId": "evt-4870",
+    "viewerCount": 12373,
+    "peakViewerCount": 15535,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:52.509Z"
+  },
+  {
+    "eventId": "evt-4876",
+    "viewerCount": 27143,
+    "peakViewerCount": 31532,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:39.561Z"
+  },
+  {
+    "eventId": "evt-4890",
+    "viewerCount": 32478,
+    "peakViewerCount": 46471,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:32.847Z"
+  },
+  {
+    "eventId": "evt-4895",
+    "viewerCount": 28155,
+    "peakViewerCount": 40969,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:49.639Z"
+  },
+  {
+    "eventId": "evt-4899",
+    "viewerCount": 44841,
+    "peakViewerCount": 46436,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:36.456Z"
+  },
+  {
+    "eventId": "evt-4917",
+    "viewerCount": 3999,
+    "peakViewerCount": 6570,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:33.945Z"
+  },
+  {
+    "eventId": "evt-4921",
+    "viewerCount": 31036,
+    "peakViewerCount": 32318,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:30.475Z"
+  },
+  {
+    "eventId": "evt-4930",
+    "viewerCount": 37446,
+    "peakViewerCount": 39312,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:29.106Z"
+  },
+  {
+    "eventId": "evt-4931",
+    "viewerCount": 44003,
+    "peakViewerCount": 54285,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.121Z"
+  },
+  {
+    "eventId": "evt-4936",
+    "viewerCount": 32151,
+    "peakViewerCount": 36364,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:45.810Z"
+  },
+  {
+    "eventId": "evt-4939",
+    "viewerCount": 23679,
+    "peakViewerCount": 34046,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:44.841Z"
+  },
+  {
+    "eventId": "evt-4941",
+    "viewerCount": 34538,
+    "peakViewerCount": 43378,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:33.418Z"
+  },
+  {
+    "eventId": "evt-4946",
+    "viewerCount": 1510,
+    "peakViewerCount": 7760,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:34.361Z"
+  },
+  {
+    "eventId": "evt-4951",
+    "viewerCount": 5119,
+    "peakViewerCount": 14513,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:37.542Z"
+  },
+  {
+    "eventId": "evt-4969",
+    "viewerCount": 3790,
+    "peakViewerCount": 8280,
+    "streamHealth": "poor",
+    "lastUpdated": "2026-02-17T23:07:53.087Z"
+  },
+  {
+    "eventId": "evt-4976",
+    "viewerCount": 37755,
+    "peakViewerCount": 51818,
+    "streamHealth": "fair",
+    "lastUpdated": "2026-02-17T23:07:28.873Z"
+  },
+  {
+    "eventId": "evt-4988",
+    "viewerCount": 28262,
+    "peakViewerCount": 33462,
+    "streamHealth": "good",
+    "lastUpdated": "2026-02-17T23:07:42.785Z"
+  },
+  {
+    "eventId": "evt-4994",
+    "viewerCount": 29206,
+    "peakViewerCount": 43971,
+    "streamHealth": "excellent",
+    "lastUpdated": "2026-02-17T23:07:54.729Z"
+  }
+]

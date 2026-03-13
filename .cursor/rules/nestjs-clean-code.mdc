@@ -1,0 +1,863 @@
+---
+description: NestJS clean code and TDD standards for backend applications
+globs: apps/api/**/*.ts,libs/shared/**/*.ts
+alwaysApply: false
+---
+
+# NestJS Clean Code & TDD Standards
+
+## Priority Legend
+- 🔴 **Critical** - Must follow, no exceptions
+- 🟠 **High** - Strong recommendation, deviate only with good reason
+- 🟡 **Standard** - Expected practice
+- 🟢 **Recommended** - Best practice but flexible
+
+---
+
+## Project Setup & Architecture
+
+- 🔴 **Follow NestJS standard module structure** with controllers, services, and providers
+- 🟠 **Use dependency injection** for all services and external dependencies
+- 🟡 **Organize code by domain/feature** rather than technical layer (e.g., `users/`, `orders/`)
+- 🔴 **Never import from implementation details** - Always use public API (index.ts/public-api.ts)
+- 🟠 **Keep modules focused and cohesive** - One responsibility per module
+- 🟡 **Use NestJS decorators properly** (`@Module`, `@Injectable`, `@Controller`, etc.)
+
+```typescript
+// ✅ GOOD: Feature-based module structure
+src/
+├── users/
+│   ├── users.module.ts
+│   ├── users.controller.ts
+│   ├── users.service.ts
+│   ├── users.repository.ts
+│   ├── dto/
+│   │   ├── create-user.dto.ts
+│   │   └── update-user.dto.ts
+│   ├── entities/
+│   │   └── user.entity.ts
+│   └── tests/
+│       ├── users.service.spec.ts
+│       ├── users.controller.spec.ts
+│       └── users.repository.spec.ts
+│
+├── orders/
+│   └── ...
+│
+├── shared/
+│   ├── decorators/
+│   ├── filters/
+│   ├── interceptors/
+│   ├── guards/
+│   ├── pipes/
+│   └── ...
+
+// ❌ BAD: Technical layer-based structure
+src/
+├── controllers/
+├── services/
+├── repositories/
+├── dto/
+└── entities/
+```
+
+---
+
+## Controllers & Routing
+
+- 🔴 **Keep controllers thin** - Only handle HTTP concerns, delegate business logic to services
+- 🟠 **Use proper HTTP methods** (GET, POST, PUT, DELETE, PATCH) for CRUD operations
+- 🔴 **Validate all inputs** using class-validator and DTOs with decorators
+- 🟠 **Implement consistent error handling** with proper HTTP status codes
+- 🟡 **Use path parameters wisely** - Keep routes clean and semantic
+- 🔴 **Never access database directly** from controllers - Always use services
+
+```typescript
+// ✅ GOOD: Thin controller with validation
+@Controller('users')
+@ApiTags('users')
+export class UsersController {
+  constructor(private readonly usersService: UsersService) {}
+
+  @Post()
+  @ApiOperation({ summary: 'Create a new user' })
+  async create(@Body() createUserDto: CreateUserDto): Promise<UserResponse> {
+    return this.usersService.create(createUserDto);
+  }
+
+  @Get(':id')
+  @ApiOperation({ summary: 'Get user by ID' })
+  async findOne(@Param('id', ParseIntPipe) id: number): Promise<UserResponse> {
+    const user = await this.usersService.findById(id);
+    if (!user) {
+      throw new NotFoundException(`User with ID ${id} not found`);
+    }
+    return user;
+  }
+
+  @Put(':id')
+  @ApiOperation({ summary: 'Update user' })
+  async update(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() updateUserDto: UpdateUserDto
+  ): Promise<UserResponse> {
+    return this.usersService.update(id, updateUserDto);
+  }
+
+  @Delete(':id')
+  @ApiOperation({ summary: 'Delete user' })
+  async remove(@Param('id', ParseIntPipe) id: number): Promise<void> {
+    await this.usersService.remove(id);
+  }
+}
+
+// ❌ BAD: Fat controller with business logic
+@Controller('users')
+export class UsersController {
+  constructor(private db: Database) {}
+
+  @Post()
+  async create(@Body() body: any) {
+    // Business logic mixed with HTTP logic
+    const hashedPassword = await bcrypt.hash(body.password, 10);
+    const user = await this.db.users.create({
+      email: body.email,
+      password: hashedPassword,
+      // ... more logic
+    });
+    return user;
+  }
+}
+```
+
+---
+
+## Services & Business Logic
+
+- 🔴 **Keep services focused** - One service = one responsibility
+- 🟠 **Use dependency injection** for all dependencies (repositories, external services)
+- 🔴 **Never mix concerns** - Separate business logic, data access, and external integrations
+- 🟠 **Implement error handling** with custom exceptions
+- 🟡 **Use interfaces** to define service contracts
+- 🔴 **Make services testable** - Avoid direct instantiation of dependencies
+
+```typescript
+// ✅ GOOD: Clean service with single responsibility
+@Injectable()
+export class UsersService {
+  constructor(
+    private readonly usersRepository: UsersRepository,
+    private readonly passwordService: PasswordService,
+    private readonly emailService: EmailService,
+    private readonly logger: Logger
+  ) {}
+
+  async create(createUserDto: CreateUserDto): Promise<User> {
+    const existingUser = await this.usersRepository.findByEmail(
+      createUserDto.email
+    );
+    if (existingUser) {
+      throw new BadRequestException('User with this email already exists');
+    }
+
+    const hashedPassword = await this.passwordService.hash(
+      createUserDto.password
+    );
+
+    const user = await this.usersRepository.create({
+      ...createUserDto,
+      password: hashedPassword
+    });
+
+    this.logger.log(`User created: ${user.id}`);
+    await this.emailService.sendWelcomeEmail(user.email);
+
+    return user;
+  }
+
+  async findById(id: number): Promise<User | null> {
+    return this.usersRepository.findById(id);
+  }
+
+  async update(id: number, updateUserDto: UpdateUserDto): Promise<User> {
+    const user = await this.findById(id);
+    if (!user) {
+      throw new NotFoundException(`User with ID ${id} not found`);
+    }
+
+    return this.usersRepository.update(id, updateUserDto);
+  }
+
+  async remove(id: number): Promise<void> {
+    const user = await this.findById(id);
+    if (!user) {
+      throw new NotFoundException(`User with ID ${id} not found`);
+    }
+
+    await this.usersRepository.remove(id);
+    this.logger.log(`User deleted: ${id}`);
+  }
+}
+
+// ❌ BAD: Service with mixed concerns
+@Injectable()
+export class UsersService {
+  constructor(private db: Database) {}
+
+  async create(body: any) {
+    // Password hashing mixed with business logic
+    body.password = await bcrypt.hash(body.password, 10);
+    
+    // Email validation mixed in
+    if (!body.email.includes('@')) throw new Error('Invalid email');
+    
+    // HTTP response building (wrong layer)
+    const result = {
+      id: body.id,
+      statusCode: 201,
+      message: 'Created'
+    };
+    
+    return result;
+  }
+}
+```
+
+---
+
+## Data Access Layer (Repositories)
+
+- 🔴 **Abstract database access** through repository pattern
+- 🟠 **Never expose database queries** to controllers or services directly
+- 🔴 **Keep repositories simple** - Only CRUD operations
+- 🟡 **Use typed queries** with proper return types
+- 🟠 **Handle database errors** in repositories, not in services
+- 🔴 **Create custom query methods** for domain-specific queries
+
+```typescript
+// ✅ GOOD: Clean repository
+@Injectable()
+export class UsersRepository {
+  constructor(private readonly prisma: PrismaService) {}
+
+  async create(data: CreateUserInput): Promise<User> {
+    try {
+      return await this.prisma.user.create({ data });
+    } catch (error) {
+      if (error.code === 'P2002') {
+        throw new BadRequestException('User with this email already exists');
+      }
+      throw error;
+    }
+  }
+
+  async findById(id: number): Promise<User | null> {
+    return this.prisma.user.findUnique({ where: { id } });
+  }
+
+  async findByEmail(email: string): Promise<User | null> {
+    return this.prisma.user.findUnique({ where: { email } });
+  }
+
+  async update(id: number, data: UpdateUserInput): Promise<User> {
+    return this.prisma.user.update({
+      where: { id },
+      data
+    });
+  }
+
+  async remove(id: number): Promise<void> {
+    await this.prisma.user.delete({ where: { id } });
+  }
+
+  async findAll(skip: number, take: number): Promise<User[]> {
+    return this.prisma.user.findMany({ skip, take });
+  }
+}
+
+// ❌ BAD: Service accessing database directly
+@Injectable()
+export class UsersService {
+  constructor(private readonly prisma: PrismaService) {}
+
+  async create(data: any) {
+    return this.prisma.user.create({ data });
+  }
+
+  async getWithOrders(id: number) {
+    // Complex queries mixed with business logic
+    return this.prisma.user.findUnique({
+      where: { id },
+      include: {
+        orders: {
+          where: { status: 'completed' },
+          orderBy: { createdAt: 'desc' },
+          take: 10
+        }
+      }
+    });
+  }
+}
+```
+
+---
+
+## DTOs & Validation
+
+- 🔴 **Always use DTOs** for request/response contracts
+- 🔴 **Implement class-validator decorators** for all inputs
+- 🟠 **Separate CreateDTO from UpdateDTO** - Different validation rules
+- 🟠 **Use custom validators** for complex validation logic
+- 🟡 **Document DTO properties** with JSDoc comments
+- 🔴 **Never expose entity properties** that shouldn't be visible to clients
+
+```typescript
+// ✅ GOOD: Properly validated DTO
+export class CreateUserDto {
+  @ApiProperty({ description: 'User email address' })
+  @IsEmail()
+  @IsNotEmpty()
+  email: string;
+
+  @ApiProperty({ description: 'User full name' })
+  @IsString()
+  @MinLength(2)
+  @MaxLength(100)
+  @IsNotEmpty()
+  name: string;
+
+  @ApiProperty({ description: 'User password' })
+  @IsString()
+  @MinLength(8)
+  @Matches(/^(?=.*[A-Za-z])(?=.*\d)/, {
+    message: 'Password must contain letters and numbers'
+  })
+  @IsNotEmpty()
+  password: string;
+}
+
+export class UpdateUserDto {
+  @ApiProperty({ description: 'User full name', required: false })
+  @IsString()
+  @MinLength(2)
+  @MaxLength(100)
+  @IsOptional()
+  name?: string;
+
+  @ApiProperty({ description: 'User phone', required: false })
+  @IsString()
+  @Matches(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)
+  @IsOptional()
+  phone?: string;
+}
+
+export class UserResponse {
+  @ApiProperty()
+  id: number;
+
+  @ApiProperty()
+  email: string;
+
+  @ApiProperty()
+  name: string;
+
+  @ApiProperty()
+  createdAt: Date;
+
+  @ApiProperty()
+  updatedAt: Date;
+}
+
+// ❌ BAD: No validation, mixing concerns
+export class UserDto {
+  email: any;
+  password: any;
+  name: any;
+  isAdmin: boolean;
+  internalId: string;
+}
+```
+
+---
+
+## Error Handling
+
+- 🔴 **Use NestJS built-in HTTP exceptions** (BadRequestException, NotFoundException, etc.)
+- 🟠 **Create custom exceptions** for domain-specific errors
+- 🔴 **Implement global exception filter** for consistent error responses
+- 🟠 **Avoid exposing internal details** in error messages
+- 🟡 **Log errors properly** with context and stack traces
+- 🔴 **Handle async errors** with try-catch or RxJS error operators
+
+```typescript
+// ✅ GOOD: Proper exception handling
+// custom-exception.ts
+export class UserNotFoundException extends HttpException {
+  constructor(userId: number) {
+    super(
+      {
+        statusCode: HttpStatus.NOT_FOUND,
+        message: `User with ID ${userId} not found`,
+        error: 'UserNotFound'
+      },
+      HttpStatus.NOT_FOUND
+    );
+  }
+}
+
+// users.service.ts
+@Injectable()
+export class UsersService {
+  constructor(
+    private readonly usersRepository: UsersRepository,
+    private readonly logger: Logger
+  ) {}
+
+  async findById(id: number): Promise<User> {
+    try {
+      const user = await this.usersRepository.findById(id);
+      if (!user) {
+        throw new UserNotFoundException(id);
+      }
+      return user;
+    } catch (error) {
+      this.logger.error(`Error finding user ${id}`, error.stack);
+      throw error;
+    }
+  }
+}
+
+// ❌ BAD: Generic error handling
+async findById(id: number) {
+  try {
+    return await this.db.users.findById(id);
+  } catch (error) {
+    throw new Error('Something went wrong'); // Too generic, bad UX
+  }
+}
+```
+
+---
+
+## Clean Code Principles for NestJS
+
+- 🔴 **Avoid nested if statements** - Use guard clauses and early returns
+- 🔴 **Limit function parameters** - Max 2-3, use object destructuring for more
+- 🔴 **Keep methods small** - Under 50 lines of code
+- 🔴 **Single Responsibility Principle** - Each class/method does one thing
+- 🟠 **Use meaningful names** - Variables, functions, and classes should reveal intent
+- 🟠 **DRY (Don't Repeat Yourself)** - Extract common logic into helper functions
+- 🟡 **Use early return pattern** - Reduce nesting and improve readability
+- 🟡 **Group related functionality** - Keep cohesive code together
+- 🟠 **Minimize comments** - Write self-documenting code
+- 🟡 **YAGNI (You Aren't Gonna Need It)** - Don't add features preemptively
+- 🟡 **Fail fast** - Detect and report errors early
+
+```typescript
+// ✅ GOOD: Clean code with early returns
+async createUser(createUserDto: CreateUserDto): Promise<User> {
+  const existingUser = await this.usersRepository.findByEmail(
+    createUserDto.email
+  );
+  
+  if (existingUser) {
+    throw new BadRequestException('Email already in use');
+  }
+
+  const hashedPassword = await this.passwordService.hash(
+    createUserDto.password
+  );
+
+  return this.usersRepository.create({
+    ...createUserDto,
+    password: hashedPassword
+  });
+}
+
+// ❌ BAD: Nested conditionals and unclear logic
+async createUser(body: any) {
+  if (body.email) {
+    const existing = await this.db.users.findOne({ email: body.email });
+    if (!existing) {
+      if (body.password) {
+        const hash = await bcrypt.hash(body.password, 10);
+        if (hash) {
+          const user = await this.db.users.create({
+            email: body.email,
+            password: hash,
+            name: body.name
+          });
+          if (user) {
+            return user;
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+---
+
+## Testing Standards (TDD)
+
+- 🔴 **Write tests FIRST** before implementation (red-green-refactor)
+- 🔴 **All business logic must have tests** - No exceptions for production code
+- 🟠 **Aim for >80% code coverage** for services and repositories
+- 🟠 **Test one thing per test** - Focused, isolated test cases
+- 🟡 **Use descriptive test names** that clearly state the scenario and expectation
+- 🟠 **Follow Arrange-Act-Assert (AAA)** for test structure
+
+### Unit Testing Services
+
+```typescript
+// ✅ GOOD: TDD service test
+describe('UsersService', () => {
+  let service: UsersService;
+  let repository: UsersRepository;
+  let passwordService: PasswordService;
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      providers: [
+        UsersService,
+        {
+          provide: UsersRepository,
+          useValue: {
+            findByEmail: jest.fn(),
+            create: jest.fn(),
+            findById: jest.fn(),
+            update: jest.fn(),
+            remove: jest.fn()
+          }
+        },
+        {
+          provide: PasswordService,
+          useValue: {
+            hash: jest.fn().mockResolvedValue('hashed_password')
+          }
+        }
+      ]
+    }).compile();
+
+    service = module.get<UsersService>(UsersService);
+    repository = module.get<UsersRepository>(UsersRepository);
+    passwordService = module.get<PasswordService>(PasswordService);
+  });
+
+  describe('create', () => {
+    it('should create a user when provided valid data', async () => {
+      // ARRANGE
+      const createUserDto: CreateUserDto = {
+        email: 'test@example.com',
+        name: 'Test User',
+        password: 'SecurePass123'
+      };
+      const createdUser: User = {
+        id: 1,
+        ...createUserDto,
+        password: 'hashed_password',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
+
+      jest.spyOn(repository, 'findByEmail').mockResolvedValueOnce(null);
+      jest.spyOn(repository, 'create').mockResolvedValueOnce(createdUser);
+
+      // ACT
+      const result = await service.create(createUserDto);
+
+      // ASSERT
+      expect(result).toEqual(createdUser);
+      expect(repository.findByEmail).toHaveBeenCalledWith(createUserDto.email);
+      expect(passwordService.hash).toHaveBeenCalledWith(createUserDto.password);
+      expect(repository.create).toHaveBeenCalledWith({
+        ...createUserDto,
+        password: 'hashed_password'
+      });
+    });
+
+    it('should throw BadRequestException when email already exists', async () => {
+      // ARRANGE
+      const createUserDto: CreateUserDto = {
+        email: 'existing@example.com',
+        name: 'Test User',
+        password: 'SecurePass123'
+      };
+      const existingUser: User = { id: 1, ...createUserDto, createdAt: new Date(), updatedAt: new Date() };
+
+      jest.spyOn(repository, 'findByEmail').mockResolvedValueOnce(existingUser);
+
+      // ACT & ASSERT
+      await expect(service.create(createUserDto)).rejects.toThrow(
+        BadRequestException
+      );
+      expect(repository.create).not.toHaveBeenCalled();
+    });
+
+    it('should handle repository errors gracefully', async () => {
+      // ARRANGE
+      const createUserDto: CreateUserDto = {
+        email: 'test@example.com',
+        name: 'Test User',
+        password: 'SecurePass123'
+      };
+
+      jest.spyOn(repository, 'findByEmail').mockResolvedValueOnce(null);
+      jest
+        .spyOn(repository, 'create')
+        .mockRejectedValueOnce(new Error('Database error'));
+
+      // ACT & ASSERT
+      await expect(service.create(createUserDto)).rejects.toThrow(
+        'Database error'
+      );
+    });
+  });
+
+  describe('findById', () => {
+    it('should return a user when found', async () => {
+      // ARRANGE
+      const userId = 1;
+      const expectedUser: User = {
+        id: userId,
+        email: 'test@example.com',
+        name: 'Test User',
+        password: 'hashed',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
+
+      jest
+        .spyOn(repository, 'findById')
+        .mockResolvedValueOnce(expectedUser);
+
+      // ACT
+      const result = await service.findById(userId);
+
+      // ASSERT
+      expect(result).toEqual(expectedUser);
+      expect(repository.findById).toHaveBeenCalledWith(userId);
+    });
+
+    it('should throw NotFoundException when user not found', async () => {
+      // ARRANGE
+      jest.spyOn(repository, 'findById').mockResolvedValueOnce(null);
+
+      // ACT & ASSERT
+      await expect(service.findById(999)).rejects.toThrow(
+        UserNotFoundException
+      );
+    });
+  });
+});
+```
+
+### Controller Testing
+
+```typescript
+// ✅ GOOD: Controller test
+describe('UsersController', () => {
+  let controller: UsersController;
+  let service: UsersService;
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      controllers: [UsersController],
+      providers: [
+        {
+          provide: UsersService,
+          useValue: {
+            create: jest.fn(),
+            findById: jest.fn(),
+            update: jest.fn(),
+            remove: jest.fn()
+          }
+        }
+      ]
+    }).compile();
+
+    controller = module.get<UsersController>(UsersController);
+    service = module.get<UsersService>(UsersService);
+  });
+
+  describe('create', () => {
+    it('should create a user and return UserResponse', async () => {
+      // ARRANGE
+      const createUserDto: CreateUserDto = {
+        email: 'test@example.com',
+        name: 'Test User',
+        password: 'SecurePass123'
+      };
+      const expectedResponse: UserResponse = {
+        id: 1,
+        email: createUserDto.email,
+        name: createUserDto.name,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
+
+      jest.spyOn(service, 'create').mockResolvedValueOnce(expectedResponse as any);
+
+      // ACT
+      const result = await controller.create(createUserDto);
+
+      // ASSERT
+      expect(result).toEqual(expectedResponse);
+      expect(service.create).toHaveBeenCalledWith(createUserDto);
+    });
+  });
+
+  describe('findOne', () => {
+    it('should return a user by ID', async () => {
+      // ARRANGE
+      const userId = 1;
+      const expectedResponse: UserResponse = {
+        id: userId,
+        email: 'test@example.com',
+        name: 'Test User',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
+
+      jest.spyOn(service, 'findById').mockResolvedValueOnce(expectedResponse as any);
+
+      // ACT
+      const result = await controller.findOne(userId);
+
+      // ASSERT
+      expect(result).toEqual(expectedResponse);
+      expect(service.findById).toHaveBeenCalledWith(userId);
+    });
+
+    it('should throw NotFoundException when user not found', async () => {
+      // ARRANGE
+      jest.spyOn(service, 'findById').mockResolvedValueOnce(null as any);
+
+      // ACT & ASSERT
+      await expect(controller.findOne(999)).rejects.toThrow(
+        NotFoundException
+      );
+    });
+  });
+});
+```
+
+### TDD Workflow
+
+1. **Red Phase**: Write a test that fails
+2. **Green Phase**: Write minimal code to pass the test
+3. **Refactor Phase**: Improve code quality while keeping tests passing
+4. **Repeat**: For each requirement
+
+---
+
+## TypeScript Standards
+
+- 🔴 **Use strict typing** for all variables, parameters, and return types
+- 🔴 **Avoid `any` type** - Use `unknown` or specific types instead
+- 🟠 **Use interfaces** over type aliases for object definitions
+- 🟡 **Implement proper generics** for reusable code
+- 🔴 **Properly type event emitters and observables**
+- 🟠 **Use readonly properties** for immutable data
+- 🟡 **Use union types** instead of boolean parameters
+
+---
+
+## Database & ORM Best Practices
+
+- 🔴 **Use proper TypeScript models** with the ORM (TypeORM, Prisma, etc.)
+- 🟠 **Implement database migrations** for schema changes
+- 🟡 **Use transactions** for multi-step operations
+- 🟠 **Implement proper indexing** for performance
+- 🟡 **Use soft deletes** where appropriate for data retention
+- 🟠 **Avoid N+1 queries** - Use eager loading when needed
+- 🔴 **Never skip validation** at the database level
+
+---
+
+## API Documentation
+
+- 🟠 **Use Swagger/OpenAPI** decorators for all endpoints
+- 🟡 **Document all parameters and responses**
+- 🟡 **Provide meaningful descriptions** for operations
+- 🟠 **Include example requests and responses**
+- 🟡 **Document error responses** with proper HTTP status codes
+
+---
+
+## Dependency Injection & Configuration
+
+- 🔴 **Use NestJS dependency injection** for all dependencies
+- 🟠 **Configure environment variables** properly with validation
+- 🟡 **Use @Inject() for optional dependencies** or non-class providers
+- 🔴 **Avoid circular dependencies** - Refactor if detected
+- 🟠 **Use lazy initialization** for expensive resources
+- 🟡 **Implement proper lifecycle hooks** (onModuleInit, onModuleDestroy, etc.)
+
+---
+
+## Security Best Practices
+
+- 🔴 **Validate all inputs** using DTOs and class-validator
+- 🔴 **Sanitize inputs** to prevent injection attacks
+- 🟠 **Implement proper authentication** and authorization
+- 🟠 **Use HTTPS** in production
+- 🟡 **Implement rate limiting** for sensitive endpoints
+- 🟠 **Hash passwords** with proper algorithms
+- 🔴 **Never log sensitive data** (passwords, tokens, etc.)
+- 🟡 **Implement CORS** properly with whitelist
+
+---
+
+## Logging & Monitoring
+
+- 🟠 **Use NestJS Logger** for consistent logging
+- 🟠 **Log at appropriate levels** (debug, log, warn, error)
+- 🟡 **Include context** in log messages for debugging
+- 🟡 **Avoid logging sensitive information**
+- 🟠 **Monitor performance** of critical operations
+- 🟡 **Implement health checks** for dependencies
+
+---
+
+## Performance Optimization
+
+- 🟡 **Use pagination** for large datasets
+- 🟠 **Implement proper indexing** in databases
+- 🟡 **Use caching** appropriately (Redis, in-memory)
+- 🟠 **Batch operations** when possible
+- 🟡 **Implement query optimization** and monitoring
+- 🟠 **Avoid unnecessary operations** in loops
+
+---
+
+## Code Organization & Naming
+
+- 🔴 **Use PascalCase** for class names
+- 🔴 **Use camelCase** for variables and methods
+- 🟠 **Use UPPER_CASE** for constants
+- 🟡 **Use descriptive names** that reveal intent
+- 🟠 **Group related code** together logically
+- 🟡 **Keep file size reasonable** - Split large files
+- 🟡 **Use consistent file naming** conventions
+
+---
+
+## ESLint Integration
+
+These rules should be enforced with ESLint configurations:
+
+- `@typescript-eslint/recommended`
+- `@typescript-eslint/recommended-requiring-type-checking`
+- Custom NestJS-specific rules
+
+Critical rules to enable:
+- `@typescript-eslint/explicit-function-return-type`
+- `@typescript-eslint/no-explicit-any`
+- `@typescript-eslint/no-floating-promises`
+- `no-nested-ternary`
+- `max-depth` (set to 2)
+- `max-lines-per-function` (set to 50)
+- `max-params` (set to 3)
+- `complexity` (set to 10)

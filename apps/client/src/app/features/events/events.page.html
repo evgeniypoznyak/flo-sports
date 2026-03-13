@@ -1,0 +1,20 @@
+<div class="events-page">
+  <header class="events-page__header">
+    <h1>FloSports Event Explorer</h1>
+  </header>
+
+  <app-filter-bar
+    [sports]="sports()"
+    (filtersChanged)="onFiltersChanged($event)"
+  />
+
+  @if (error()) {
+    <p class="events-page__error">{{ error() }}</p>
+  }
+
+  @if (loading()) {
+    <p class="events-page__loading">Loading events...</p>
+  } @else {
+    <app-event-list [events]="events()" />
+  }
+</div>
