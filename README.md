@@ -139,82 +139,200 @@ Everything in the repo was reviewed and understood by me. I can explain any deci
 
 ## Development Process
 
-Below is a log of the AI-assisted workflow: the prompts I gave, the plans generated, and how Cursor executed on them. This shows my thought process and how I directed the tool.
+This section documents the full development workflow from top to bottom: prompts given, plans generated, and how the implementation was executed step by step.
 
 ---
 
-### Prompt 1 — Initial Plan Setup
+### 1. Initial Plan Setup
 
-**My prompt:**
+**Prompt:** Read the assessment folder (especially the PRD PDF) and split the task into 2–3 point stories.
 
-> Please read @assessment especially @assessment/Staff Full Stack PRD.pdf and try to split this entire task into 2-3 point stories.
-
-**Result:** Cursor produced a full implementation plan broken into three stories — [plan.md](artifacts/plan.md)
-
----
-
-### Prompt 2 — Applying Engineering Principles
-
-**My prompt:**
-
-> 1. We should write any code with TDD
-> 2. We should follow @.cursor/rules
-> 3. Please use concepts from Martin Fowler Book 2nd edition such as guards and early returns over nested statements
-> 4. Write DRY code
-> 5. Do not overengineer, do not do YAGNI
-> 6. Follow SOLID principles
-> 7. Follow Robert C. Martin Clean Code principles (short and self-describing functions, with tests, self-described variables, etc.)
-> 8. Make sure all tests are not failing
-> 9. Also try to follow design patterns from Gang of Four book and try to design and place code with DDD concept by Eric Evans book
-
-**Cursor asked a clarifying question:**
-
-> The previous plan said "no repository pattern" (YAGNI). But DDD calls for a Repository to abstract data access, and the PRD explicitly asks "What would change if these were real upstream HTTP services instead of files?" — which is exactly what a repository interface solves. Should we add a lightweight EventsRepository interface + JsonEventsRepository implementation (DDD/Dependency Inversion), or keep data loading directly in the service (simpler but less DDD)?
-
-**My answer:** Yes, add lightweight Repository (DDD-aligned, answers the PRD question directly).
-
-**What changed in the plan:**
-
-- **Guiding Principles** section added — TDD (red-green-refactor strictly), Clean Code, SOLID, DRY, guards/early returns, and an explicit YAGNI list
-- **Story 1 (Backend)** — exact TDD sequence: 8 tests for the service, 4 for the controller, written before implementation. Pure filter functions with guard clauses. Thin controller. `EventFilterDto` for typed query params
-- **Story 2 (Frontend)** — exact TDD sequence per component (toggle: 3 tests, search: 4, dropdown: 7, filter bar: 4). Angular signals for state. OnPush change detection. Feature-based folder structure
-- **Story 3 (Polish)** — integration verification, error handling edge cases, README with all 7 PRD-required sections
-
-All three stories follow the same discipline: tests first, no overengineering, self-describing code, short functions, early returns.
+**Result:** A plan with three stories:
+- Story 1: Shared models + NestJS backend API
+- Story 2: Angular filter bar + event list
+- Story 3: Polish, error handling, README
 
 ---
 
-### Prompt 3 — Build Plan
+### 2. Applying Engineering Principles
 
-**My prompt:**
+**Prompt:** Apply TDD, .cursor/rules, Martin Fowler (guards/early returns), DRY, YAGNI, SOLID, Clean Code, Gang of Four patterns, and DDD (Eric Evans).
 
-> Build Plan [plan.md](artifacts/plan.md)
+**Clarification:** Add a lightweight Repository pattern (DDD-aligned) to answer the PRD question about switching to real HTTP upstreams.
 
-**How Cursor executed:**
+**Plan updates:**
+- Guiding Principles section (TDD, Clean Code, SOLID, DRY, YAGNI, DDD, GoF)
+- Design Patterns & DDD mapping (Bounded Context, Entity, Value Objects, Repository, Strategy, Adapter, Observer, Facade)
+- Exact TDD sequences per component
+- Repository interface + `JsonEventsRepository` adapter
 
-Cursor worked through all three stories sequentially, following TDD throughout:
+---
 
-**Story 1 — Backend (31 tests, all green)**
-- Shared domain types in `libs/shared`: `FloEvent`, `LiveStats`, `EventWithStats`, `EventFilterParams`, status/health types
-- `EventsRepository` abstract class (port) + `JsonEventsRepository` (adapter) — DDD Repository pattern with DI
-- `event-filter.strategy.ts` — pure filter functions with guard clauses (Strategy pattern)
-- `EventsService` — application service that orchestrates repository + filter strategies
-- `EventsController` — thin presentation layer: `GET /api/events`, `GET /api/events/sports`, `GET /api/events/:id`
+### 3. Implementation — Story 1: Backend
 
-**Story 2 — Frontend (29 tests, all green)**
-- `EventsApiService` — facade over API endpoints with typed HttpClient
-- `ToggleComponent` — accessible toggle switch with `role="switch"`, `aria-checked`, keyboard support
-- `SearchInputComponent` — debounced (300ms) search with clear button
-- `SportDropdownComponent` — custom dropdown with search, ARIA attributes, click-outside, Escape-to-close
-- `FilterBarComponent` — composes the three filters, emits combined `EventFilterParams`
-- `EventListComponent` — displays events with status badges and live stats
-- `EventsPage` — container component using signals for state, wires filters to API
+**3.1 Shared domain model** (`libs/shared/src/lib/event.models.ts`)
 
-**Story 3 — Polish**
-- Both projects build successfully (`nx build api`, `nx build client`)
-- ESLint passes with zero errors
-- README covers all 7 PRD-required sections
-- Error handling: loading state, API error display, empty results message
-- `nx serve client` starts both backend and frontend via proxy
+- `EventStatus`, `StreamHealth` (value object types)
+- `FloEvent` (entity)
+- `LiveStats`, `EventWithStats` (aggregate root), `EventFilterParams`
+- `libs/shared/src/index.ts` updated with `export type` (required for Angular `isolatedModules`)
 
-**Totals: 60 tests across 10 test files, all passing. Zero lint errors.**
+**3.2 API test infrastructure**
+
+- `apps/api/vitest.config.ts` — Vitest config with `@flo-sports/shared` alias
+- `apps/api/tsconfig.spec.json` — spec tsconfig with vitest globals
+- `apps/api/project.json` — added `test` target (`vitest run`)
+- `apps/api/tsconfig.json` — added `tsconfig.spec.json` reference
+
+**3.3 Data files**
+
+- Copied `flo-events.json` and `live-stats.json` from `assesment/` to `apps/api/src/assets/data/`
+- Converted `flo-events.json` from JavaScript object literal format to valid JSON (original had unquoted keys)
+- Filtered 2 empty `{}` entries in the data
+
+**3.4 Repository (TDD)**
+
+- `events.repository.ts` — abstract class with `findAllEvents()`, `findAllLiveStats()`
+- `json-events.repository.spec.ts` — 5 tests (typed arrays, valid ids, no empty objects)
+- `json-events.repository.ts` — loads JSON from disk, injectable `DATA_PATH` for test vs prod paths
+
+**3.5 Filter strategy (TDD)**
+
+- `event-filter.strategy.spec.ts` — 11 tests (status, sport, search guards, composition)
+- `event-filter.strategy.ts` — pure functions: `filterByStatus`, `filterBySport`, `filterBySearch`, `applyFilters` with guard clauses
+
+**3.6 Application service (TDD)**
+
+- `dto/event-filter.dto.ts` — optional `sport`, `status`, `search`
+- `events.service.spec.ts` — 10 tests (merge stats, filters, findOne, getSports, NotFoundException)
+- `events.service.ts` — orchestrates repository + filter strategies, `buildStatsMap()` for O(1) merge
+
+**3.7 Controller (TDD)**
+
+- `events.controller.spec.ts` — 5 tests (delegation, 404 propagation)
+- `events.controller.ts` — thin: `GET /api/events`, `GET /api/events/sports`, `GET /api/events/:id`
+
+**3.8 Module wiring**
+
+- `events.module.ts` — providers for `DATA_PATH`, `EventsRepository` → `JsonEventsRepository`, `EventsService`
+- `app.module.ts` — imports `EventsModule`
+- Removed `app.controller.ts`, `app.service.ts`
+- Removed `libs/shared/src/lib/shared.ts` placeholder
+
+**3.9 Build fixes**
+
+- `tsconfig.app.json` — exclude `**/*.spec.ts` from production build
+- `json-events.repository.ts` — fixed type: `FloEvent[]` instead of `Record<string, unknown>[]` for strict mode
+
+**Story 1 outcome:** 31 tests passing across 4 spec files.
+
+---
+
+### 4. Implementation — Story 2: Frontend
+
+**4.1 HTTP client**
+
+- `app.config.ts` — added `provideHttpClient()`
+
+**4.2 Events API service (TDD)**
+
+- `events-api.service.spec.ts` — 4 tests (GET URLs, query params, omit undefined)
+- `events-api.service.ts` — `getEvents(filters)`, `getSports()`, typed `HttpClient`
+
+**4.3 Toggle component (TDD)**
+
+- `toggle.component.spec.ts` — 5 tests (aria-checked, click, Enter/Space)
+- `toggle.component.ts` — signals, `output()`, OnPush
+- `toggle.component.html` — `role="switch"`, `aria-checked`
+- `toggle.component.scss` — custom switch styling
+
+**4.4 Search input component (TDD)**
+
+- `search-input.component.spec.ts` — 5 tests (debounce via `vi.useFakeTimers`, clear button)
+- `search-input.component.ts` — RxJS `debounceTime(300)`, `Subject` for input stream
+- `search-input.component.html` — input + conditional clear button
+- `search-input.component.scss` — input styling
+
+**4.5 Sport dropdown component (TDD)**
+
+- `sport-dropdown.component.spec.ts` — 9 tests (open/close, select, filter, Escape, click-outside, ARIA)
+- `sport-dropdown.component.ts` — signals, `computed` for filtered options, `HostListener` for click-outside
+- `sport-dropdown.component.html` — combobox, listbox, search input, options with `tabindex`, `keydown.enter`
+- `sport-dropdown.component.scss` — dropdown panel styling
+
+**4.6 Filter bar component (TDD)**
+
+- `filter-bar.component.spec.ts` — 5 tests (renders controls, emits filters)
+- `filter-bar.component.ts` — composes toggle, search, dropdown; emits `EventFilterParams`
+- `filter-bar.component.html` — layout of three child components
+- `filter-bar.component.scss` — flex layout
+
+**4.7 Event list component**
+
+- `event-list.component.ts` — input `events`, `DatePipe`, `DecimalPipe`
+- `event-list.component.html` — cards with status badge, sport, league, startTime, live stats (viewers, peak, streamHealth)
+- `event-list.component.scss` — card layout, status colors
+
+**4.8 Events page (container)**
+
+- `events.page.ts` — `EventsApiService`, signals for `events`, `sports`, `loading`, `error`
+- `events.page.html` — header, filter bar, error/loading/event list
+- `events.page.scss` — page layout
+
+**4.9 Routing and app shell**
+
+- `app.routes.ts` — lazy load `EventsPage` at `/`
+- `app.ts` — removed `NxWelcome`, `RouterModule` only
+- `app.html` — `<router-outlet>` only
+- `app.spec.ts` — simplified to basic create test
+- Deleted `nx-welcome.ts`
+- `styles.scss` — base reset and body styles
+
+**4.10 Lint and accessibility fixes**
+
+- `sport-dropdown.component.html` — `aria-controls`, `aria-selected`, `tabindex`, `keydown.enter` on options, `tabindex="-1"` on wrapper for focusable element with keydown
+
+**Story 2 outcome:** 29 tests passing across 6 spec files.
+
+---
+
+### 5. Implementation — Story 3: Polish
+
+**5.1 Build verification**
+
+- `nx build api` — success (spec files excluded from build)
+- `nx build client` — success
+
+**5.2 README**
+
+- Setup (clone, install, `nx serve client`)
+- Run tests
+- Assumptions (no pagination, case-insensitive search, debounce, empty JSON handling)
+- API design (3 endpoints, response shape)
+- Data loading and merging (Map for O(1), repository swap for HTTP)
+- Backend decisions (feature-based module, pure filters)
+- Trade-offs (prioritized vs skipped)
+- AI tools usage
+
+**5.3 Error handling**
+
+- `EventsPage` — `loading` and `error` signals, error display in template
+- API error handling in `loadEvents` and `loadSports` subscribe callbacks
+
+**5.4 Final verification**
+
+- `nx test api` — 31 tests pass
+- `nx test client --watch=false` — 29 tests pass
+- `nx lint client` — 0 errors
+
+---
+
+### 6. Summary
+
+| Metric | Value |
+|--------|-------|
+| API tests | 31 (4 spec files) |
+| Client tests | 29 (6 spec files) |
+| Total tests | 60 |
+| Lint errors | 0 |
+| Build | api + client both succeed |
